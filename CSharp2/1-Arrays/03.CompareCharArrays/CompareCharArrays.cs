@@ -10,31 +10,24 @@ class CompareCharArrays
         Console.Write("Please enter the second string: ");
         string secondString = Console.ReadLine();
         
-        // Remove uppercase
-        firstString = firstString.ToLower();
-        secondString = secondString.ToLower();
+        // Find the longest string length
+        int length = Math.Max(firstString.Length, secondString.Length);
 
-        // Equalize the string lengths with spaces (lowest lexicographic order count)
-        if (firstString.Length > secondString.Length)
+        // Remove uppercase, equalize string lengths with spaces, convert to char array 
+        char[] firstArray = firstString.ToLower().PadRight(length).ToCharArray();
+        char[] secondArray = secondString.ToLower().PadRight(length).ToCharArray();
+        
+        // Compare arrays element wise
+        for (int i = 0; i < firstArray.Length; i++)
         {
-            secondString = secondString.PadRight(firstString.Length);
-        }
-        else if (secondString.Length > firstString.Length)
-        {
-            firstString = firstString.PadRight(secondString.Length);
-        }
-
-        // Compare strings element wise
-        for (int i = 0; i < firstString.Length; i++)
-        {
-            if (firstString[i] < secondString[i])
+            if (firstArray[i] < secondArray[i])
             {
-                Console.WriteLine("{0} < {1}", firstString, secondString);
+                Console.WriteLine("{0} is lexicographically first", firstString);
                 break;
             }
-            else if (firstString[i] > secondString[i])
+            else if (firstArray[i] > secondArray[i])
             {
-                Console.WriteLine("{0} < {1}", secondString, firstString);
+                Console.WriteLine("{0} is lexicographically first", secondString);
                 break;
             }
         }
