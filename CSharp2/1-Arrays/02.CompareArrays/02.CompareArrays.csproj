@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C07386E7-33AA-4B01-B830-2111C4F0AC9E}</ProjectGuid>
+    <ProjectGuid>{66F62835-B5FB-4A81-BE70-FA1D2F6ECA97}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_01.InitializeArray</RootNamespace>
-    <AssemblyName>01.InitializeArray</AssemblyName>
+    <RootNamespace>_02.CompareArrays</RootNamespace>
+    <AssemblyName>02.CompareArrays</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InitializeArray.cs" />
+    <Compile Include="CompareArrays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
