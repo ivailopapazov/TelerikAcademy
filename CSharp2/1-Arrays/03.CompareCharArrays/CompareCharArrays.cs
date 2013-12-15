@@ -4,9 +4,6 @@ class CompareCharArrays
 {
     static void Main()
     {
-        // Var declaration
-        bool isIdentical = true;
-
         // User input 
         Console.Write("Please enter the first word: ");
         char[] firstArray = Console.ReadLine().ToLower().ToCharArray();
@@ -22,32 +19,27 @@ class CompareCharArrays
             if (firstArray[i] < secondArray[i])
             {
                 Console.WriteLine("{0} is lexicographically first", new string(firstArray));
-                isIdentical = false;
-                break;
+                return;
             }
             else if (firstArray[i] > secondArray[i])
             {
                 Console.WriteLine("{0} is lexicographically first", new string(secondArray));
-                isIdentical = false;
-                break;
+                return;
             }
         }
 
         // Compare arrays by length if elements are the same
-        if (isIdentical)
+        if (firstArray.Length < secondArray.Length)
         {
-            if (firstArray.Length < secondArray.Length)
-            {
-                Console.WriteLine("{0} is lexicographically first", new string(firstArray));
-            }
-            else if (secondArray.Length < firstArray.Length)
-            {
-                Console.WriteLine("{0} is lexicographically first", new string(secondArray));
-            }
-            else
-            {
-                Console.WriteLine("The words are lexicographically the same");
-            }
+            Console.WriteLine("{0} is lexicographically first", new string(firstArray));
+        }
+        else if (secondArray.Length < firstArray.Length)
+        {
+            Console.WriteLine("{0} is lexicographically first", new string(secondArray));
+        }
+        else
+        {
+            Console.WriteLine("The words are lexicographically the same");
         }
     }
 }
