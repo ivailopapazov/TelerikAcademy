@@ -19,23 +19,22 @@ class SortingArray
         }
 
         // Selection sort algorithm
-        for (int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < numbers.Length - 1; i++)
         {
 
-            int minValue = int.MaxValue;
             int minIndex = i;
 
             // Search for element with lower value
-            for (int j = i; j < numbers.Length; j++)
+            for (int j = i + 1; j < numbers.Length; j++)
             {
-                if (numbers[j] < minValue)
+                if (numbers[j] < numbers[i])
                 {
-                    minValue = numbers[j];
                     minIndex = j;
                 }
             }
 
             // Swap elements
+            int minValue = numbers[minIndex];
             numbers[minIndex] = numbers[i];
             numbers[i] = minValue;
         }
