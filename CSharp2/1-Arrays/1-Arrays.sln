@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FindMaxSum", "06.FindMax
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SortingArray", "07.SortingArray\07.SortingArray.csproj", "{1635A026-A3E7-4708-A357-692B6B3B6454}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.MaxSumSequence", "08.MaxSumSequence\08.MaxSumSequence.csproj", "{803816E2-2CD5-4D7A-BDD1-94E49A1317CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1635A026-A3E7-4708-A357-692B6B3B6454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1635A026-A3E7-4708-A357-692B6B3B6454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1635A026-A3E7-4708-A357-692B6B3B6454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803816E2-2CD5-4D7A-BDD1-94E49A1317CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803816E2-2CD5-4D7A-BDD1-94E49A1317CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803816E2-2CD5-4D7A-BDD1-94E49A1317CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803816E2-2CD5-4D7A-BDD1-94E49A1317CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
