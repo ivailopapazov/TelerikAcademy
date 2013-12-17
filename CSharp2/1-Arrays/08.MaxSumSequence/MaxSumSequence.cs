@@ -15,7 +15,7 @@ class MaxSumSequence
             numbers[i] = int.Parse(Console.ReadLine());
         }
         
-        // Declaration
+        // Variable Declaration
         int maxSum = 0;
         int maxSeqSum = 0;
         int seqStart = 0;
