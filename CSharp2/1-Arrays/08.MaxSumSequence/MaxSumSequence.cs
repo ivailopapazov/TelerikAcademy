@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class MaxSumSequence
 {
@@ -17,30 +18,53 @@ class MaxSumSequence
         // Declaration
         int maxSum = 0;
         int maxSeqSum = 0;
+        int seqStart = 0;
+        int maxSeqStart = 0;
+        bool negativeNumberSet = true;
+        List<int> subSet = new List<int>();
 
         // Solution
         for (int i = 0; i < numbers.Length; i++)
         {
-            // Sequence sum
+            // Positive sequence sum
             if (maxSeqSum + numbers[i] > 0)
             {
                 maxSeqSum += numbers[i];
+                negativeNumberSet = false;
             }
-            else if (numbers[i] > 0)
-            {
-                maxSeqSum = numbers[i];
-            }
+            // Break of sequence (negative sum)
             else
             {
-                maxSeqSum = 0;
+                maxSeqSum = 0; // Starting new sequence sum
+                seqStart = i + 1; // Remember position of next positive number (start of new sequence)
             }
 
             // Max sum
             if (maxSum < maxSeqSum)
             {
-                maxSum = maxSeqSum;
+                maxSum = maxSeqSum; // Store max sum value
+                maxSeqStart = seqStart; // Remember start position of current max sequence 
             }
         }
-        Console.WriteLine(maxSum);
+
+        // Case when all numbers are negative
+        if (negativeNumberSet)
+        {
+            Array.Sort(numbers);
+            maxSum = numbers[numbers.Length - 1];
+            subSet.Add(numbers[numbers.Length - 1]);
+        }
+        // If there are positive numbers
+        else
+        {
+            for (int i = maxSeqStart, sum = 0; sum != maxSum; i++)
+            {
+                sum += numbers[i];
+                subSet.Add(numbers[i]);
+            }
+        }
+
+        // Printing result
+        Console.WriteLine("The sequence of maximal sum is {{ {0} }} and its sum is {1}", string.Join(", " ,subSet), maxSum);
     }
 }

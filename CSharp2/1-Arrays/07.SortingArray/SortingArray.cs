@@ -23,18 +23,19 @@ class SortingArray
         {
 
             int minIndex = i;
+            int minValue = numbers[i];
 
             // Search for element with lower value
             for (int j = i + 1; j < numbers.Length; j++)
             {
-                if (numbers[j] < numbers[i])
+                if (numbers[j] < minValue)
                 {
                     minIndex = j;
+                    minValue = numbers[j];
                 }
             }
 
             // Swap elements
-            int minValue = numbers[minIndex];
             numbers[minIndex] = numbers[i];
             numbers[i] = minValue;
         }
