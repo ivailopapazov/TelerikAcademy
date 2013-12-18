@@ -22,7 +22,7 @@ class SequenceOfGivenSum
         bool sequenceExists = false;
         List<int> seqElements = new List<int>();
 
-        // Solution
+        // Solution 1: Works only for positive numbers but it's faster
         for (int i = 0; i < numbers.Length; i++)
         {
             sum += numbers[i];
@@ -39,6 +39,28 @@ class SequenceOfGivenSum
                 break;
             }
         }
+
+        //// Solution 2: Slower, but works with negative numebrs
+        //for (int i = 0; i < numbers.Length; i++)
+        //{
+        //    for (int j = i; j < numbers.Length; j++)
+        //    {
+        //        sum += numbers[j];
+        //        seqElements.Add(numbers[j]);
+
+        //        if (sum == S)
+        //        {
+        //            sequenceExists = true;
+        //            break;
+        //        }
+        //    }
+        //    if (sequenceExists)
+        //    {
+        //        break;
+        //    }
+        //    sum = 0;
+        //    seqElements.Clear();
+        //}
 
         // Printing result
         if (sequenceExists)
