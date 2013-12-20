@@ -15,11 +15,14 @@ class QuickSortAlgorithm
         }
 
         // Sorting 
-        QuickSort(ref numbers, 0, numbers.Length - 1);
+        QuickSort(numbers);
+
+        // Printing result
+        Console.WriteLine("Ordered array: {{ {0} }}", string.Join(", ", numbers));
 
     }
 
-    static void QuickSort(ref int[] elements, int leftBorder, int rightBorder)
+    static void QuickSort(int[] elements, int leftBorder, int rightBorder)
     {
         // Bottom of recursion
         if (rightBorder - leftBorder < 1)
@@ -67,7 +70,16 @@ class QuickSortAlgorithm
         }
 
         // Recursive method call
-        QuickSort(ref elements, leftBorder, min - 1); // Recursion on left subarray
-        QuickSort(ref elements, min, rightBorder); // Recursion on right subarray
+        QuickSort(elements, leftBorder, min - 1); // Recursion on left subarray
+        QuickSort(elements, min, rightBorder); // Recursion on right subarray
+    }
+    // Overload method for simpler call
+    static void QuickSort(int[] elements)
+    {
+        if (elements == null)
+        {
+            throw new ArgumentNullException("Array cannot be null!");
+        }
+        QuickSort(elements, elements.GetLowerBound(0), elements.Length - 1);
     }
 }
