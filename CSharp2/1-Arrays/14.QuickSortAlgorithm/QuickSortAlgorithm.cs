@@ -19,7 +19,6 @@ class QuickSortAlgorithm
 
         // Printing result
         Console.WriteLine("Ordered array: {{ {0} }}", string.Join(", ", numbers));
-
     }
 
     static void QuickSort(int[] elements, int leftBorder, int rightBorder)
