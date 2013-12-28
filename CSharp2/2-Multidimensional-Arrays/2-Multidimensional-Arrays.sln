@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PrintMatrices", "01.PrintMatrices\01.PrintMatrices.csproj", "{1D741B06-C8C0-4599-B195-A77DD42C1663}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MaxSqareSumInMatrix", "02.MaxSqareSumInMatrix\02.MaxSqareSumInMatrix.csproj", "{0E93358D-C5FA-4EF7-923A-BD1211936E4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D741B06-C8C0-4599-B195-A77DD42C1663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D741B06-C8C0-4599-B195-A77DD42C1663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D741B06-C8C0-4599-B195-A77DD42C1663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E93358D-C5FA-4EF7-923A-BD1211936E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E93358D-C5FA-4EF7-923A-BD1211936E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E93358D-C5FA-4EF7-923A-BD1211936E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E93358D-C5FA-4EF7-923A-BD1211936E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
