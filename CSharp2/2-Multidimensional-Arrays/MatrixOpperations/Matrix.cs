@@ -35,10 +35,60 @@ namespace MatrixOpperations
                 throw new InvalidOperationException("Dimension missmatch");
             }
 
-            for (int i = 0; i < length; i++)
+            Matrix matrixSum = new Matrix(A.Rows, A.Cols);
+
+            for (int i = 0; i < matrixSum.Rows; i++)
             {
-                
+                for (int j = 0; j < matrixSum.Cols; j++)
+                {
+                    matrixSum[i, j] = A[i, j] + B[i, j]; 
+                }
             }
+
+            return matrixSum;
+        }
+
+        public static Matrix operator -(Matrix A, Matrix B)
+        {
+            if (A.Rows != B.Rows && A.Cols != B.Cols)
+            {
+                throw new InvalidOperationException("Dimension missmatch");
+            }
+
+            Matrix matrixDifference = new Matrix(A.Rows, A.Cols);
+
+            for (int i = 0; i < matrixDifference.Rows; i++)
+            {
+                for (int j = 0; j < matrixDifference.Cols; j++)
+                {
+                    matrixDifference[i, j] = A[i, j] - B[i, j];
+                }
+            }
+
+            return matrixDifference;
+        }
+
+        public static Matrix operator *(Matrix A, Matrix B)
+        {
+            if (A.Cols != B.Rows)
+            {
+                throw new InvalidOperationException("Dimension missmatch");
+            }
+
+            Matrix matrixProduct = new Matrix(A.Rows, B.Cols);
+
+            for (int rowA = 0; rowA < A.Rows; rowA++)
+            {
+                for (int colB = 0; colB < B.Cols; colB++)
+                {
+                    for (int colA = 0; colA < A.Cols; colA++)
+                    {
+                        matrixProduct[rowA, colB] += A[rowA, colA] * B[colA, colB];
+                    }
+                }
+            }
+
+            return matrixProduct;
         }
 
         public override string ToString()
