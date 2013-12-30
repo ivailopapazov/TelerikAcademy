@@ -6,10 +6,14 @@ namespace MatrixOpperations
     public class Matrix
     {
         private int[,] container;
+        public int Rows { get; private set; }
+        public int Cols { get; private set; }
 
         public Matrix(int rows, int cols)
         {
             this.container = new int[rows, cols];
+            Rows = rows;
+            Cols = cols;
         }
 
         public int this[int i, int j]
@@ -26,9 +30,14 @@ namespace MatrixOpperations
 
         public static Matrix operator +(Matrix A, Matrix B)
         {
-            if (A.GetRows() != B.GetRows() && A.GetCols() != B.GetCols())
+            if (A.Rows != B.Rows && A.Cols != B.Cols)
             {
                 throw new InvalidOperationException("Dimension missmatch");
+            }
+
+            for (int i = 0; i < length; i++)
+            {
+                
             }
         }
 
@@ -45,16 +54,6 @@ namespace MatrixOpperations
                 stringMatrix.AppendLine();
             }
             return stringMatrix.ToString();
-        }
-
-        public int GetRows()
-        {
-            return container.GetLength(0);
-        }
-
-        public int GetCols()
-        {
-            return container.GetLength(1);
         }
 
     }
