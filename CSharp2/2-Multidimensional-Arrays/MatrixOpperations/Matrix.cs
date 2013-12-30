@@ -32,7 +32,7 @@ namespace MatrixOpperations
         {
             if (A.Rows != B.Rows && A.Cols != B.Cols)
             {
-                throw new InvalidOperationException("Dimension missmatch");
+                throw new InvalidOperationException("Matrix dimension missmatch");
             }
 
             Matrix matrixSum = new Matrix(A.Rows, A.Cols);
@@ -52,7 +52,7 @@ namespace MatrixOpperations
         {
             if (A.Rows != B.Rows && A.Cols != B.Cols)
             {
-                throw new InvalidOperationException("Dimension missmatch");
+                throw new InvalidOperationException("Matrix dimension missmatch");
             }
 
             Matrix matrixDifference = new Matrix(A.Rows, A.Cols);
@@ -72,7 +72,7 @@ namespace MatrixOpperations
         {
             if (A.Cols != B.Rows)
             {
-                throw new InvalidOperationException("Dimension missmatch");
+                throw new InvalidOperationException("Matrix dimension missmatch");
             }
 
             Matrix matrixProduct = new Matrix(A.Rows, B.Cols);

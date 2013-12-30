@@ -14,16 +14,18 @@ class SortStringArray
             words[i] = Console.ReadLine();
         }
 
-        // Variable Declaration
+        // Using QuickSort method
         QuickSort(words);
+
+        // Printing Result
         Console.WriteLine(new string('-', 20));
         foreach (var word in words)
         {
             Console.WriteLine(word);
         }
-
-        // Some solution
     }
+
+    // Quicksort algorithm
     static void QuickSort(string[] stringArray, int leftBorder, int rightBorder)
     {
         if (rightBorder - leftBorder < 1)
@@ -68,6 +70,7 @@ class SortStringArray
         QuickSort(stringArray, leftIndex, rightBorder);
     }
 
+    // Quicksort Method overload
     static void QuickSort(string[] stringArray)
     {
         QuickSort(stringArray, 0, stringArray.Length - 1);

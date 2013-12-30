@@ -5,13 +5,14 @@ class MaxSqareSumInMatrix
 {
     static void Main()
     {
+        // User Input
         Console.Write("Please enter rows: ");
         int N = int.Parse(Console.ReadLine());
         Console.Write("Please enter cols: ");
         int M = int.Parse(Console.ReadLine());
 
+        // Parse Matrix
         int[,] matrix = new int[N, M];
-
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             string[] row = Console.ReadLine().Split(' ');
@@ -21,17 +22,17 @@ class MaxSqareSumInMatrix
             }
         }
 
-        PrintMatrices.PrintMatrix(matrix);
-
+        // Variable Declaration
         int squareField = 3;
         int squareSum = 0;
         int squareSumBest = int.MinValue;
         int[,] squareMatrix = new int[squareField, squareField];
         int[,] bestSquareMatrix = new int[squareField, squareField];
 
-        for (int matrixRow = 0; matrixRow < matrix.GetLength(0) - squareField; matrixRow++)
+        // Search in matrix
+        for (int matrixRow = 0; matrixRow <= matrix.GetLength(0) - squareField; matrixRow++)
         {
-            for (int matrixCol = 0; matrixCol < matrix.GetLength(1) - squareField; matrixCol++)
+            for (int matrixCol = 0; matrixCol <= matrix.GetLength(1) - squareField; matrixCol++)
             {
                 for (int squareRow = matrixRow; squareRow < matrixRow + squareField; squareRow++)
                 {
@@ -46,11 +47,12 @@ class MaxSqareSumInMatrix
                     squareSumBest = squareSum;
                     bestSquareMatrix = (int[,])squareMatrix.Clone();
                 }
-                squareSum = int.MinValue;
+                squareSum = 0;
             }
         }
 
-        PrintMatrices.PrintMatrix(bestSquareMatrix);
+        // Print result
+        PrintMatrices.PrintMatrix(bestSquareMatrix); // Using method PrintMatrix() from project 01.PrintMatrices
         Console.WriteLine("Max sum: {0}", squareSumBest);
 
     }

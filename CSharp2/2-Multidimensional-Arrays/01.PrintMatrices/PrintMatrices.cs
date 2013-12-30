@@ -14,7 +14,7 @@ namespace Matrices
             int[,] matrix = new int[n, n];
             int count = 1;
 
-            // Generate Matrix A
+            // Matrix A
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 for (int i = 0; i < matrix.GetLength(0); i++)
@@ -25,7 +25,7 @@ namespace Matrices
             }
             PrintMatrix(matrix);
 
-            // Generate Matrix B
+            // Matrix B
             count = 1;
             for (int j = 0; j < matrix.GetLength(1); j++)
             {

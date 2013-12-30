@@ -7,14 +7,24 @@ class LongestSequenceInMatrix
 
     static void Main()
     {
-        string[,] stringMatrix = new string[,]
-        {
-            {"as", "sd", "ds", "fd", "szx"},
-            {"ds", "as", "sdsd", "ssdd", "sdsd"},
-            {"as", "sdd", "sa", "sdsd", "zsd"},
-            {"sd", "sd", "sd", "as", "sdsd"}
-        };
+        // User Input
+        Console.Write("Please enter rows: ");
+        int N = int.Parse(Console.ReadLine());
+        Console.Write("Please enter cols: ");
+        int M = int.Parse(Console.ReadLine());
 
+        // Parse Matrix
+        string[,] stringMatrix = new string[N, M];
+        for (int i = 0; i < stringMatrix.GetLength(0); i++)
+        {
+            string[] row = Console.ReadLine().Split(' ');
+            for (int j = 0; j < stringMatrix.GetLength(1); j++)
+            {
+                stringMatrix[i, j] = row[j];
+            }
+        }
+
+        // Traverse the array
         for (int i = 0; i < stringMatrix.GetLength(0); i++)
         {
             for (int j = 0; j < stringMatrix.GetLength(1); j++)
@@ -23,7 +33,8 @@ class LongestSequenceInMatrix
             }
         }
 
-        Console.WriteLine("{0} {1}", bestElement, bestCount);
+        // Print Result
+        Console.WriteLine("Element - {0}, count - {1}", bestElement, bestCount);
     }
     static void SearchMatrix(string[,] stringMatrix, int row, int col, int rowNext, int colNext)
     {

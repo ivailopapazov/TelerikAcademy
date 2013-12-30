@@ -4,6 +4,7 @@ class BinarySearch
 {
     static void Main()
     {
+        // User Input
         Console.Write("Please enter array size: ");
         int size = int.Parse(Console.ReadLine());
         Console.Write("Please enter number K: ");
@@ -15,14 +16,19 @@ class BinarySearch
             haystack[i] = int.Parse(Console.ReadLine());
         }
 
+        // Sorting array
         Array.Sort(haystack);
+
+        // Binary search method
         int needleIndex = Array.BinarySearch(haystack, needle);
 
+        // In case needle is not found
         if (needleIndex < 0)
         {
             needleIndex = ~needleIndex - 1;
         }
 
+        // Printing result
         Console.WriteLine(haystack[needleIndex]);
     }
 }
