@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CompareToNeighbourElemen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.FindFirstBiggerNeighbour", "06.FindFirstBiggerNeighbour\06.FindFirstBiggerNeighbour.csproj", "{3F744717-8CE3-4970-B19E-351C212EFAAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ReverseNumberDigits", "07.ReverseNumberDigits\07.ReverseNumberDigits.csproj", "{97718E27-66E8-4D7B-A83D-3E26DB750101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3F744717-8CE3-4970-B19E-351C212EFAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F744717-8CE3-4970-B19E-351C212EFAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F744717-8CE3-4970-B19E-351C212EFAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97718E27-66E8-4D7B-A83D-3E26DB750101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97718E27-66E8-4D7B-A83D-3E26DB750101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97718E27-66E8-4D7B-A83D-3E26DB750101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97718E27-66E8-4D7B-A83D-3E26DB750101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
