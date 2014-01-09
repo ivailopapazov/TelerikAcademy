@@ -25,7 +25,7 @@ class PrintNumberRepCount
         // User Input
         Console.Write("Please enter array size: ");
         int arraySize = int.Parse(Console.ReadLine());
-        Console.Write("Please enter a number: ");
+        Console.Write("Please enter a number to search for: ");
         int numberForCount = int.Parse(Console.ReadLine());
         int[] numbers = new int[arraySize];
         for (int i = 0; i < numbers.Length; i++)

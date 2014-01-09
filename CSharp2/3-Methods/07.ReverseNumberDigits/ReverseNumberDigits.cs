@@ -2,24 +2,27 @@
 
 class ReverseNumberDigits
 {
-    static int ReverseNumber(int number)
+    static string ReverseCharacters(string word)
     {
-        string raw = number.ToString();
-        string reversedRaw = string.Empty;
-        for (int i = raw.Length - 1; i >= 0; i--)
-        {
-            reversedRaw += raw[i];
-        }
+        // Taking input string as character array
+        char[] wordArray = word.ToCharArray();
 
-        return int.Parse(reversedRaw);
+        // Reverse the array
+        Array.Reverse(wordArray);
+
+        // Return reversed array as string
+        return new string(wordArray);
     }
     static void Main()
     {
+        // User Input
         Console.Write("Please enter a number: ");
-        int number = int.Parse(Console.ReadLine());
+        string word = Console.ReadLine();
 
-        int reversedNumber = ReverseNumber(number);
+        // Parsing the inverted string to integer
+        int invertedNumber = int.Parse(ReverseCharacters(word));
 
-        Console.WriteLine(reversedNumber);
+        // Print Result
+        Console.WriteLine(invertedNumber);
     }
 }
