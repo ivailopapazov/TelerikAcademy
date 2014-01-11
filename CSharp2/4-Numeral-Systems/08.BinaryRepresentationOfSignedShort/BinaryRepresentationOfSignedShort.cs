@@ -3,7 +3,7 @@ using Conversions;
 
 class BinaryRepresentationOfSignedShort
 {
-    static string ShortBinaries(int decNumber)
+    static string GetShortRepresentation(int decNumber)
     {
         // Binary holder
         string binaryHolder = string.Empty;
@@ -24,7 +24,7 @@ class BinaryRepresentationOfSignedShort
 
             // Converting to binary
             binaryHolder = ConvertDecimalToBinary.ToBinary(negativeNumberRepresentation);
-
+             
             // Adding leading zeroes
             binaryHolder = binaryHolder.PadLeft(15, '0');
 
@@ -42,7 +42,7 @@ class BinaryRepresentationOfSignedShort
         int number = int.Parse(Console.ReadLine());
 
         // Get signed short binary representation
-        string binaryRepresentation = ShortBinaries(number);
+        string binaryRepresentation = GetShortRepresentation(number);
 
         // Print result 
         Console.WriteLine(binaryRepresentation);
