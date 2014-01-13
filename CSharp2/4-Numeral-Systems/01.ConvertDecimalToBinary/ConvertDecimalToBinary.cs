@@ -1,6 +1,4 @@
-﻿// 1.Write a program to convert decimal numbers to their binary representation.
-
-using System;
+﻿using System;
 using System.Text;
 
 namespace Conversions

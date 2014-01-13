@@ -98,6 +98,6 @@ class BinaryRepresentationOfFloat
         string mantissaBits = FractionToBinay(fraction);
 
         // Print result
-        Console.WriteLine("{0} {1} {2} ({3})", signBit, exponentBits, mantissaBits, fraction);
+        Console.WriteLine("{0} {1} {2}", signBit, exponentBits, mantissaBits);
     }
 }
