@@ -1,0 +1,8 @@
+start
+start
+start
+startbeforeword
+afterwordstart
+start in sentence
+surroundedstartinwords
+start start start

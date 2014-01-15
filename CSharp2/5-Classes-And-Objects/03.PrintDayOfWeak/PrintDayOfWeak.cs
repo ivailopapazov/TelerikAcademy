@@ -4,6 +4,10 @@ class PrintDayOfWeak
 {
     static void Main()
     {
-        Console.WriteLine(DateTime.Now.DayOfWeek);
+        // Get today's day of weak
+        DayOfWeek todaysDay = DateTime.Today.DayOfWeek;
+
+        // Print result
+        Console.WriteLine(todaysDay);
     }
 }
