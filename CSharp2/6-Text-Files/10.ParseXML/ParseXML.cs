@@ -10,28 +10,37 @@ class ParseXML
     static void Main()
     {
         // Variable declarations
-        char currentChar = new char();
-        StringBuilder container = new StringBuilder();
+        StringBuilder words = new StringBuilder();
+        string word = string.Empty;
 
         // Get xml content
         string content = File.ReadAllText(FilePath);
 
+        // Parse xml conent
         for (int i = 0; i < content.Length; i++)
         {
-            // Get current char
-            currentChar = content[i];
-
-            // Move index if xml tag begins
-            if (currentChar == '<')
+            // Beginning of tag
+            if (content[i] == '<')
             {
+                // If there was a word before the tag
+                if (word.Length != 0)
+                {
+                    words.AppendLine(word.Trim());
+                }
+                // Move index to the end of the tag
                 i = content.IndexOf('>', i);
+                // Clear current word
+                word = string.Empty;
             }
+            // Between tags
             else
             {
-                container.Append(currentChar);
+                // Add characters to form a word
+                word += content[i];
             }
         }
 
-        Console.WriteLine(container);
+        // Print result
+        Console.WriteLine(words);
     }
 }
