@@ -65,10 +65,17 @@ class CountWordsInText
                 }
             }
         }
-        catch (Exception)
+        catch (ArgumentNullException exc)
         {
-            
-            throw;
+            Console.WriteLine(exc.Message);
+        }
+        catch (FormatException exc)
+        {
+            Console.WriteLine(exc.Message);
+        }
+        catch (IOException exc)
+        {
+            Console.WriteLine(exc.Message);
         }
 
 

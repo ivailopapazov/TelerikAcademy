@@ -35,10 +35,25 @@ class DeleteWords
                 output.Write(textContent);
             }
         }
-        catch (Exception)
+        catch (ArgumentNullException exc)
         {
-            
-            throw;
+            Console.WriteLine(exc.Message);
+        }
+        catch (ArgumentException exc)
+        {
+            Console.WriteLine(exc.Message);
+        }
+        catch (UnauthorizedAccessException exc)
+        {
+            Console.WriteLine(exc.Message);
+        }
+        catch (IOException exc)
+        {
+            Console.WriteLine(exc.Message);
+        }
+        catch (Exception exc)
+        {
+            Console.WriteLine(exc.Message);
         }
         finally
         {
