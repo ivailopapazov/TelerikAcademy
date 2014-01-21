@@ -1,1 +1,1 @@
-some text with words to be removed from
+some text with   be  from
