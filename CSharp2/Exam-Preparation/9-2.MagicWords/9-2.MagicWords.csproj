@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FE5D99D-5619-43F1-931D-E3D99F341365}</ProjectGuid>
+    <ProjectGuid>{A94F5724-DA99-4F6E-82DF-8021E13FDA27}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_1_1.BasicBASIC</RootNamespace>
-    <AssemblyName>1-1.BasicBASIC</AssemblyName>
+    <RootNamespace>_9_2.MagicWords</RootNamespace>
+    <AssemblyName>9-2.MagicWords</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicBASIC.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

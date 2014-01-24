@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// http://bgcoder.com/Contests/Submissions/View/281538
 class Program
 {
     static long TraverseValley(int[] valley)

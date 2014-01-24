@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// http://bgcoder.com/Contests/Submissions/View/284124
 namespace _8_1._9GagNumbers
 {
     class Program

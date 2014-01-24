@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// http://bgcoder.com/Contests/Submissions/View/282989
+
 class Program
 {
     static void Main()

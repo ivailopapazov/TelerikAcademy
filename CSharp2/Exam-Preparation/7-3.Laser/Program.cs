@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
+// http://bgcoder.com/Contests/Submissions/View/283153
+
 class Program
 {
     static int[] ReadNumbers()
