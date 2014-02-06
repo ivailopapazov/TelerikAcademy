@@ -13,6 +13,7 @@ namespace MobilePhone.Library
         private Display display;
         private int? price;
         private string owner;
+        private List<Call> callHistory = new List<Call>();
 
         // Static initializer
         /// <summary>
@@ -183,7 +184,13 @@ namespace MobilePhone.Library
         /// <summary>
         /// Gets list of call history.
         /// </summary>
-        public List<Call> CallHistory { get; private set; }
+        public List<Call> CallHistory 
+        {
+            get
+            {
+                return this.callHistory;
+            }
+        }
 
         /// <summary>
         /// Adds new call to call history.
@@ -197,7 +204,7 @@ namespace MobilePhone.Library
             Call newCall = new Call(dateTime, duration, dialedNumber);
 
             // Adding the new call to call history list
-            CallHistory.Add(newCall);
+            callHistory.Add(newCall);
         }
 
         /// <summary>
@@ -207,7 +214,7 @@ namespace MobilePhone.Library
         public void DeleteCall(int callID)
         {
             // Delete call from call history
-            CallHistory.RemoveAt(callID);
+            callHistory.RemoveAt(callID);
         }
 
         /// <summary>
@@ -216,7 +223,7 @@ namespace MobilePhone.Library
         public void ClearCalls()
         {
             // Clear the call history list.
-            CallHistory.Clear();
+            callHistory.Clear();
         }
 
         /// <summary>
@@ -231,7 +238,7 @@ namespace MobilePhone.Library
             int callsDuration = 0;
 
             // Calculate total call duration.
-            foreach (Call call in CallHistory)
+            foreach (Call call in callHistory)
             {
                 callsDuration += call.Duration;
             }

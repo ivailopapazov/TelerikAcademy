@@ -24,6 +24,7 @@ namespace MobilePhone.UI
             }
 
             // Display the information about the static property IPhone4S.
+            Console.WriteLine("IPhone 4S information");
             Console.WriteLine(GSM.IPhone4S);
         }
     }
