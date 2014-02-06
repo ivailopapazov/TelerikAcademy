@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhone.Library", "MobilePhone.Library\MobilePhone.Library.csproj", "{9928FA44-726B-4D92-88F4-71094DAAAF86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhone.UI", "MobilePhone.UI\MobilePhone.UI.csproj", "{CF3D970A-CE5B-4F9F-A8D0-8A8F86700B49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilePhone.UI.GSMTest", "MobilePhone.UI\MobilePhone.UI.GSMTest.csproj", "{CF3D970A-CE5B-4F9F-A8D0-8A8F86700B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
