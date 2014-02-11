@@ -8,7 +8,7 @@ namespace CustomCollections.Generic
     /// Represents generic type collection.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class GenericList<T> : IList<T>, IEnumerable<T> where T: IEquatable<T>, IComparable
+    public class GenericList<T> : IList<T>, IEnumerable<T> where T: IEquatable<T>, IComparable<T>
     {
         #region Fields
 
@@ -87,7 +87,7 @@ namespace CustomCollections.Generic
         }
         #endregion
 
-        #region Properties
+        #region Indexer
         /// <summary>
         /// Gets or sets GenericList element by it's index.
         /// </summary>
