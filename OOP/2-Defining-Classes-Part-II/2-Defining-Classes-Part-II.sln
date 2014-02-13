@@ -5,9 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearAlgebra.Common", "LinearAlgebra.Common\LinearAlgebra.Common.csproj", "{1939DCBB-FE30-4E9F-BB80-AC3BCDF0CA17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearAlgebra.UI", "LinearAlgebra.UI\LinearAlgebra.UI.csproj", "{078EC7CA-0B3D-4638-97F2-23602ADFC5AF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCollections.Generic", "CustomCollections.Generic\CustomCollections.Generic.csproj", "{F9A86360-B3CE-43E0-9881-28CD388ABE9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearAlgebra.UI", "LinearAlgebra.UI\LinearAlgebra.UI.csproj", "{2D1F90AA-13CF-4484-A9CD-599AAFF52163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "Attributes\Attributes.csproj", "{1A8816B4-FA85-4D6A-AC24-8DD686777C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{1939DCBB-FE30-4E9F-BB80-AC3BCDF0CA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1939DCBB-FE30-4E9F-BB80-AC3BCDF0CA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1939DCBB-FE30-4E9F-BB80-AC3BCDF0CA17}.Release|Any CPU.Build.0 = Release|Any CPU
-		{078EC7CA-0B3D-4638-97F2-23602ADFC5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{078EC7CA-0B3D-4638-97F2-23602ADFC5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{078EC7CA-0B3D-4638-97F2-23602ADFC5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{078EC7CA-0B3D-4638-97F2-23602ADFC5AF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F9A86360-B3CE-43E0-9881-28CD388ABE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F9A86360-B3CE-43E0-9881-28CD388ABE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9A86360-B3CE-43E0-9881-28CD388ABE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9A86360-B3CE-43E0-9881-28CD388ABE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1F90AA-13CF-4484-A9CD-599AAFF52163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1F90AA-13CF-4484-A9CD-599AAFF52163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1F90AA-13CF-4484-A9CD-599AAFF52163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1F90AA-13CF-4484-A9CD-599AAFF52163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8816B4-FA85-4D6A-AC24-8DD686777C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8816B4-FA85-4D6A-AC24-8DD686777C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8816B4-FA85-4D6A-AC24-8DD686777C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8816B4-FA85-4D6A-AC24-8DD686777C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LinearAlgebra.UI")]
+[assembly: AssemblyTitle("03-05.SelectStudents")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LinearAlgebra.UI")]
+[assembly: AssemblyProduct("03-05.SelectStudents")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8e446fa1-c434-401f-8d49-83726c6030ba")]
+[assembly: Guid("c63fad03-51d7-4452-b13c-1d8823c0bf0e")]
 
 // Version information for an assembly consists of the following four values:
 //

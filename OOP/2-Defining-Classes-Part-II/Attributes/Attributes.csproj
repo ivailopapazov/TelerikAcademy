@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D1F90AA-13CF-4484-A9CD-599AAFF52163}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{1A8816B4-FA85-4D6A-AC24-8DD686777C26}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LinearAlgebra.UI</RootNamespace>
-    <AssemblyName>LinearAlgebra.UI</AssemblyName>
+    <RootNamespace>Attributes</RootNamespace>
+    <AssemblyName>Attributes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,25 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="VersionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Attributes\Attributes.csproj">
-      <Project>{1a8816b4-fa85-4d6a-ac24-8dd686777c26}</Project>
-      <Name>Attributes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CustomCollections.Generic\CustomCollections.Generic.csproj">
-      <Project>{f9a86360-b3ce-43e0-9881-28cd388abe9b}</Project>
-      <Name>CustomCollections.Generic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LinearAlgebra.Common\LinearAlgebra.Common.csproj">
-      <Project>{1939dcbb-fe30-4e9f-bb80-ac3bcdf0ca17}</Project>
-      <Name>LinearAlgebra.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
