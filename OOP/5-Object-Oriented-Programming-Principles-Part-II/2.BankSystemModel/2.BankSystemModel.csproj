@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E33B48A2-0340-4BD2-B1D5-D3A9FAAA2EE1}</ProjectGuid>
+    <ProjectGuid>{F535C09B-6976-4A5E-BD16-B0C1854B1946}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ParticleSystem</RootNamespace>
-    <AssemblyName>ParticleSystem</AssemblyName>
+    <RootNamespace>_2.BankSystemModel</RootNamespace>
+    <AssemblyName>2.BankSystemModel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,22 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleRenderer.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="IMovingParticle.cs" />
-    <Compile Include="IParticle.cs" />
-    <Compile Include="IParticleOperator.cs" />
-    <Compile Include="IRenderable.cs" />
-    <Compile Include="IRenderer.cs" />
-    <Compile Include="MatrixCoords.cs" />
-    <Compile Include="Particle.cs" />
-    <Compile Include="ParticleUpdater.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerType.cs" />
+    <Compile Include="DepositAccount.cs" />
+    <Compile Include="IDepositable.cs" />
+    <Compile Include="IDrawable.cs" />
+    <Compile Include="LoanAccount.cs" />
+    <Compile Include="MortgageAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ParticleSystemDiagram.cd" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

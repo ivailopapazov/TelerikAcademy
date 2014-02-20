@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ParticleSystem")]
+[assembly: AssemblyTitle("3.GenericException")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ParticleSystem")]
+[assembly: AssemblyProduct("3.GenericException")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c45c8e60-fa2c-49f6-b909-60ef36bdad85")]
+[assembly: Guid("4396d786-ef31-42f1-8fc4-7b59651d84a9")]
 
 // Version information for an assembly consists of the following four values:
 //
