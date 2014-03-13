@@ -6,7 +6,7 @@ namespace SimpleDataStructures
     using System.Text;
     using System.Threading.Tasks;
 
-    public class LinkedStack<T>
+    public class LinkedStack<T> : IStack<T>
     {
         private Node<T> first;
 
@@ -62,6 +62,11 @@ namespace SimpleDataStructures
             }
 
             return this.first.Value;
+        }
+
+        public void Clear()
+        {
+            this.first = null;
         }
 
         public bool IsEmpty()

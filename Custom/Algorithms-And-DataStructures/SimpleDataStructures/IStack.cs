@@ -1,4 +1,4 @@
-﻿namespace SimpleDataStructures
+namespace SimpleDataStructures
 {
     using System;
     using System.Collections.Generic;
@@ -6,11 +6,10 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    class Program
+    public interface IStack<T>
     {
-        static void Main(string[] args)
-        {
-
-        }
+        void Push(T item);
+        T Peak();
+        T Pop();
     }
 }
