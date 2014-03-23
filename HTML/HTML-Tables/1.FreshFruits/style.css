@@ -1,0 +1,6 @@
+table { width: 500px; }
+th { 
+	font-weight: bold;
+	font-style: italic;
+	font-size: 32px; 
+}

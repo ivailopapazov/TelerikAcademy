@@ -27,9 +27,8 @@ namespace SimpleDataStructures
             {
                 return this.capacity;
             }
-            set
+            private set
             {
-                this.Resize(capacity);
                 this.capacity = value;
             }
         }
@@ -38,7 +37,7 @@ namespace SimpleDataStructures
         {
             if (this.IsFull())
             {
-                this.Resize(capacity * 2);
+                this.Resize(this.Capacity * 2);
             }
 
             this.internalArray[this.count] = item;
@@ -107,7 +106,13 @@ namespace SimpleDataStructures
                 throw new IndexOutOfRangeException("Array capacity cannot be less than element count.");
             }
 
+            if (capacity == this.Capacity)
+            {
+                return;
+            }
+
             var newArray = new T[capacity];
+            this.Capacity = capacity;
 
             // NOTE: Array.Copy() maybe is faster
             for (int i = 0; i < this.count; i++)

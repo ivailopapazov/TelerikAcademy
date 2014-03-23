@@ -1,0 +1,11 @@
+button {
+	width: 35px;
+}
+
+button.double {
+	width: 75px;
+}
+
+.result {
+	text-align: right;
+}

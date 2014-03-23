@@ -1,0 +1,15 @@
+body { 
+	background-color: #ADD8E6; 
+}
+
+ul.nav {
+ list-style-type: disc; 
+}
+
+ul.info { 
+	list-style: none; 
+}
+
+ul.info li label { 
+	font-weight: bold;
+}
