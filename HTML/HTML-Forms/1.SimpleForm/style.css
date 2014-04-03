@@ -18,13 +18,22 @@ td.submit {
 
 textarea {
 	width: 200px;
+	height: 50px
 }
 
 input[type="text"] {
 	width: 200px;
 }
 
-input[type="tel"] {
+input.tel {
+	width: 40px;
+}
+
+input.date {
+	width: 20px;
+}
+
+input#year {
 	width: 40px;
 }
 

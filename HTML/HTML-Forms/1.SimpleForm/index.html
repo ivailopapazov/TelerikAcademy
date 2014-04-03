@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form method="POST" action="index.html">
+	<form name="register" method="POST" action="index.html">
 		<table>
 			<tbody>
 				<tr>
@@ -73,9 +73,9 @@
 						<label for="number">number</label>)
 					</td>
 					<td>
-						(+<input type="tel" id="countryCode" name="countryCode" />)
-						<input type="tel" id="areaCode" name="areaCode" />
-						-<input type="tel" id="number" name="number" />
+						(+<input type="text" class="tel" id="countryCode" name="countryCode" />)
+						<input type="text" class="tel" id="areaCode" name="areaCode" />
+						-<input type="text" class="tel" id="number" name="number" />
 					</td>
 				</tr>
 				<tr>
@@ -83,39 +83,50 @@
 						<label for="email">E-mail</label>
 					</td>
 					<td>
-						<input type="text" id="email" name="email" />
+						<input type="email" id="email" name="email" />
 					</td>
 				</tr>
 				<tr>
 					<td class="label">
-						<label for="lastName">Birth date</label>
+						<label for="month">Birth date</label>
 					</td>
 					<td>
-						<input type="text" id="lastName" name="lastName" />
+						<label for="month">Month</label>
+						<input type="text" id="month" class="date" name="month" />
+						<label for="day">Day</label>
+						<input type="text" id="day" class="date" name="day" />
+						<label for="year">Year(4 digit)</label>
+						<input type="text" id="year" class="date" name="year" />
 					</td>
 				</tr>
 				<tr>
 					<td class="label">
-						<label for="lastName">Gender</label>
+						<label for="gender">Gender</label>
 					</td>
 					<td>
-						<input type="text" id="lastName" name="lastName" />
+						<select id="gender" name="gender">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
 					<td class="label">
-						<label for="lastName">Starting date</label>
+						<label for="startDate">Starting date</label>
 					</td>
 					<td>
-						<input type="text" id="lastName" name="lastName" />
+						<input type="radio" name="startDate" value="Spring 2006" id="spring2006" />
+						<label for="spring2006">Spring 2006</label>
+						<input type="radio" name="startDate" value="Summer 2006" id="summer2006" />
+						<label for="summer2006">Summer 2006</label>
 					</td>
 				</tr>
 				<tr>
 					<td class="label">
-						<label for="lastName">Comments/Questions</label>
+						<label for="comments">Comments/Questions</label>
 					</td>
 					<td>
-						<input type="text" id="lastName" name="lastName" />
+						<textarea name="comments" id="comments"></textarea>
 					</td>
 				</tr>
 				<tr>

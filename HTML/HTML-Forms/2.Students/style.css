@@ -6,3 +6,7 @@ th, td {
 	border: 2px solid #A1A1A1;
 	padding: 5px;
 }
+
+td:last-child {
+	font-weight: bold;
+}

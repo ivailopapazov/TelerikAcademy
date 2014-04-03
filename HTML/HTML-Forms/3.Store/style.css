@@ -1,0 +1,18 @@
+li {
+	display: inline;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+th {
+	border-bottom: 2px solid black;
+}
+
+img {
+	width: 100px;
+}

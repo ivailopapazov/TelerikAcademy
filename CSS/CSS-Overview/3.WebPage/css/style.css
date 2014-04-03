@@ -1,0 +1,53 @@
+body {
+	background-color: #A4A4A4;
+	font-family: "Times New Roman", serif;
+	font-size: 18px;
+}
+
+h1 {
+	color: #F7FBD0;
+	text-align: center;	
+	font-size: 2.5em;
+}
+
+nav ul {
+	text-align: center;
+	list-style: none;
+	font-weight: bold;
+}
+
+nav a {
+	color: white;
+	font-size: 1.3em;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav a.current {
+	background-color: #D0D0D0;
+}
+
+article h1 {
+	font-size: 1.8em;
+	text-align: left;
+}
+
+article p {
+
+}
+
+article footer {
+	font-size: 0.75em;
+}
+
+article footer a {
+	text-decoration: none;
+	color: black;
+}
+
+body > footer {
+	text-align: center;
+}
