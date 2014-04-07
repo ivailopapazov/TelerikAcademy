@@ -1,0 +1,178 @@
+body {
+	background-color: #e3e3e3;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+.calculator {
+	background-image: url('../img/background.png');
+	width: 500px;
+	margin: auto;
+	padding: 0 5 5px;
+	border-radius: 5px;
+}
+
+header hgroup {
+	float:left;
+	margin: 5px 0;
+}
+
+header hgroup img {
+	width: 22px;
+	margin-bottom: -5px;
+}
+
+header hgroup h1 {
+	display: inline;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+header .windowBar {
+	float: right;
+	padding-top: 0px;
+}
+
+header .windowBar button {
+	margin: 0;
+	font-weight: bold;	
+}
+
+header .windowBar button:last-child {
+	background-color: red;
+	color: white;
+}
+
+.main {
+	clear: both;
+	border: 1px solid gray;
+}
+
+.menu {
+	background-color: #F5F6F7;
+} 
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #C9CCD6;
+}
+
+.menu ul li {
+	display: inline-block;
+	padding: 3px 5px ;
+}
+
+.menu ul li:first-letter {
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+.menu ul li:hover {
+	background-color: #D9E4F1;
+	padding: 2px 4px;
+	border: 1px solid #7BA0CE;
+	cursor: default;
+}
+
+.content {
+	padding: 5px;
+	color: #133C6C;
+	background: -webkit-linear-gradient(top, white, #D9E4F1 20%)
+}
+
+.bitViewer, .numericSystem, .bitLength, .keyboard button {
+	border: 1px solid #C9CCD6;
+	border-radius: 2px;
+	background-color: #D9E4F1;
+}
+
+.result input[type=text] {
+	display: block;
+	padding: 15px 5px 4px;
+	text-align: right;
+	width: 100%;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: black;
+	border: 1px solid #C9CCD6;
+	border-radius: 2px;
+	background: -webkit-linear-gradient(top, #E6EFFB, white);
+}
+
+.bitViewer table {
+	width: 100%;
+	margin: 3px 0;
+	font-size: .8em;
+	color: inherit;
+	line-height: 10px;
+}
+
+.bitViewer table td {
+	padding-left: 12px;
+	text-align: left;
+}
+
+.bitViewer table .bitLabel {
+	color: gray;
+}
+
+.options {
+	float: left;
+	width: 95px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.numericSystem, .bitLength {
+	height: 94px;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+.bitLength {
+	margin-top: 5px;
+}
+
+.options label {
+	font-size: .8em;
+	padding-right: 25px;
+	line-height: 20px;
+}
+
+.keyboard {
+	float: left;
+	width: 388px;
+	text-align: justify;
+	margin-top: 5px;
+}
+
+.keyboard:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+
+.keyboard button {
+	width: 41px;
+	height: 32px;
+	margin-bottom: 5px;
+	color: inherit;
+}
+
+.keyboard .doubleWidth {
+	width: 91px;
+}
+
+.keyboard .doubleHeight {
+	float: right;	
+	height: 69px;
+	margin-left: 9px;
+}
+
+.clear {
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}

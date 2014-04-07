@@ -1,0 +1,21 @@
+body {
+	font-size: 16px;
+	width: 650px;
+	margin: auto;
+	padding-top: 20px;
+}
+
+p {
+	color: #0094ff;
+	font-family: Consolas;
+}
+
+p:first-line {
+	font-weight: bold;
+}
+
+p:first-letter {
+	font-size: 2.5em;
+	font-family: "Edwardian Script ITC";
+	padding-left: 5px;
+}

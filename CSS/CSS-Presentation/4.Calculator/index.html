@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="calculator">
+		<header>
+			<hgroup>
+				<img src="img/calculator.png" alt="calculator" />
+				<h1>Calculator</h1>
+			</hgroup>
+			<div class="windowBar">
+				<button type="button">_</button>
+				<button type="button">□</button>
+				<button type="button">x</button>
+			</div>
+		</header>
+		<div class="main">
+			<div class="menu">
+				<ul>
+					<li>View</li>
+					<li>Edit</li>
+					<li>Help</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="result">
+					<input type="text" id="result" readonly="readonly" value="8854455" />
+				</div>
+				<div class="bitViewer">
+					<table>
+						<tbody>
+							<tr>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+								<td>0000</td>
+							</tr>
+							<tr>
+								<td class="bitLabel" colspan="4">63</td>
+								<td class="bitLabel" colspan="3">47</td>
+								<td class="bitLabel">32</td>
+							</tr>
+							<tr>
+								<td>0000</td>
+								<td>0000</td>
+								<td>1000</td>
+								<td>0111</td>
+								<td>0001</td>
+								<td>1011</td>
+								<td>1011</td>
+								<td>0111</td>
+							</tr>
+							<tr>
+								<td class="bitLabel" colspan="4">31</td>
+								<td class="bitLabel" colspan="3">15</td>
+								<td class="bitLabel">0</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="options">
+					<div class="numericSystem">
+						<input type="radio" name="numericSystem" id="Hex" />
+						<label for="Hex">Hex</label>
+						<input type="radio" name="numericSystem" id="Dec" checked="checked" />
+						<label for="Dec">Dec</label>
+						<input type="radio" name="numericSystem" id="Oct" />
+						<label for="Oct">Oct</label>
+						<input type="radio" name="numericSystem" id="Bin" />
+						<label for="Bin">Bin</label>
+					</div>
+					<div class="bitLength">
+						<input type="radio" name="bitLength" id="Qword" checked="checked" />
+						<label for="Qword">Qword</label>
+						<input type="radio" name="bitLength" id="Dword" />
+						<label for="Dword">Dword</label>
+						<input type="radio" name="bitLength" id="Word" />
+						<label for="Word">Word</label>
+						<input type="radio" name="bitLength" id="Byte" />
+						<label for="Byte">Byte</label>
+					</div>
+				</div>				
+				<div class="keyboard">
+					<button type="button">s</button>
+					<button type="button">Mod</button>
+					<button type="button">A</button>
+					<button type="button">MC</button>
+					<button type="button">MR</button>
+					<button type="button">MS</button>
+					<button type="button">M+</button>
+					<button type="button">M-</button>
+					<button type="button">(</button>
+					<button type="button">)</button>
+					<button type="button">B</button>
+					<button type="button">←</button>
+					<button type="button">CE</button>
+					<button type="button">C</button>
+					<button type="button" class="underscore">+</button>
+					<button type="button">√</button>
+					<button type="button">RoL</button>
+					<button type="button">RoR</button>
+					<button type="button">C</button>
+					<button type="button">7</button>
+					<button type="button">8</button>
+					<button type="button">9</button>
+					<button type="button">/</button>
+					<button type="button">%</button>
+					<button type="button">Or</button>
+					<button type="button">Xor</button>
+					<button type="button">D</button>
+					<button type="button">4</button>
+					<button type="button">5</button>
+					<button type="button">6</button>
+					<button type="button">*</button>
+					<button type="button">1/x</button>
+					<button type="button">Lsh</button>
+					<button type="button">Rsh</button>
+					<button type="button">E</button>
+					<button type="button">1</button>
+					<button type="button">2</button>
+					<button type="button">3</button>
+					<button type="button">-</button>
+					<button type="button" class="doubleHeight">=</button>
+					<button type="button">Not</button>
+					<button type="button">And</button>
+					<button type="button">F</button>
+					<button type="button" class="doubleWidth">0</button>
+					<button type="button">.</button>
+					<button type="button">+</button>
+				</div>
+				<div class="clear">end of calculator</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
