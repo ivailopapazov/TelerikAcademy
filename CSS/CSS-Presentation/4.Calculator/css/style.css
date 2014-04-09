@@ -104,7 +104,8 @@ header .windowBar button:last-child {
 .bitViewer table {
 	width: 100%;
 	margin: 3px 0;
-	font-size: .8em;
+	font-family: Consolas;
+	font-size: .9em;
 	color: inherit;
 	line-height: 10px;
 }
