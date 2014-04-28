@@ -1,0 +1,179 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+}
+body {
+  font-size: 14px;
+  font-family: Corbel;
+}
+#root {
+  margin: 3px 5px;
+  width: 375px;
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-radius: 15px 0 0 0;
+}
+#root h1 {
+  margin: 18px 0 18px 70px;
+  font-weight: bold;
+  font-size: 1.9em;
+}
+#root .widget {
+  margin-left: 25px;
+  margin-right: 58px;
+  background: -webkit-linear-gradient(#cbf7be, #e5d96e);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+}
+#root .widget .box label {
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 2px;
+}
+#root .widget .box label:nth-of-type(3) {
+  margin-left: 55px;
+}
+#root .widget .box label:nth-of-type(4) {
+  margin-left: 60px;
+}
+#root .widget .box input {
+  border: 3px inset #d9e2d7;
+  border-radius: 5px;
+  padding: 5px 5px 5px 15px;
+  font-style: italic;
+  color: black;
+  background: transparent;
+}
+#root .widget .box input::-webkit-input-placeholder {
+  color: black;
+}
+#root .widget .box .dropdown {
+  display: inline-block;
+  position: relative;
+}
+#root .widget .box .dropdown span.chosen {
+  font-weight: bold;
+}
+#root .widget .box .dropdown span.chosen:before {
+  content: url("images/down-arrow.png");
+  margin-bottom: -5px;
+}
+#root .widget .box .dropdown span.expanded:before {
+  content: url("images/left-arrow.png");
+}
+#root .widget .box .dropdown ul {
+  display: none;
+}
+#root .widget .box .dropdown ul.expanded {
+  position: absolute;
+  left: 160px;
+  top: 0;
+  display: block;
+  list-style: none;
+  width: 160px;
+  text-align: center;
+  background: -webkit-linear-gradient(#e5d96e, #cbf7be);
+  padding: 0 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#root .widget .box .dropdown ul.expanded li {
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+#root .widget .box .dropdown ul.expanded li:hover {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#root .widget .box button {
+  margin-top: 10px;
+  width: 100%;
+  background: transparent;
+  padding: 5px;
+  font-size: 1.1em;
+  border: 3px inset #d9e2d7;
+  border-radius: 5px;
+}

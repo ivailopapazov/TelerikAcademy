@@ -1,0 +1,159 @@
+.reset() {
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		font: inherit;
+	}
+}
+
+.clear() {
+	zoom: 1;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+	}
+}
+
+.reset();
+
+body {
+  font-size: 14px;
+  font-family: Corbel;
+
+}
+
+#root {
+	@border: 3px solid black;
+	
+	margin: 3px 5px;
+	width: 375px;
+	border-top: @border;
+	border-left: @border;
+	border-radius: 15px 0 0 0;
+
+	h1 {
+		margin: 18px 0 18px 70px;
+		font-weight: bold;
+		font-size: 1.9em;
+	}
+
+	.widget {
+		margin-left: 25px;
+		margin-right: 58px;
+		background: -webkit-linear-gradient(#CBF7BE, #E5D96E);
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 15px;
+		
+		.box {
+
+			.border-inset() {
+				border: 3px inset lighten(#86A37D, 30);
+				border-radius: 5px;
+			} 
+
+			label {
+				font-weight: bold;
+				margin-left: 20px;
+				margin-right: 2px;
+
+				&:nth-of-type(3) {
+					margin-left: 55px;
+				}
+
+				&:nth-of-type(4) {
+					margin-left: 60px;
+				}
+			}
+
+			input {
+				.border-inset();
+				padding: 5px 5px 5px 15px;
+				font-style: italic;
+				color: black;
+				background: transparent;
+
+				&::-webkit-input-placeholder {
+					color: black;
+				}
+			}
+
+
+
+			.dropdown {
+				display: inline-block;
+				position: relative;
+
+				span.chosen {
+					font-weight: bold;
+
+					&:before {
+						content: url("images/down-arrow.png");
+						margin-bottom: -5px;
+					}
+
+				}
+				
+				span.expanded {
+					&:before {
+						content: url("images/left-arrow.png");
+					}
+				}
+
+				ul {
+					display: none;
+				}
+
+				ul.expanded {
+					position: absolute;
+					left: 160px;
+					top: 0;
+					display: block;
+					list-style: none;
+					width: 160px;
+					text-align: center;
+					background: -webkit-linear-gradient(#E5D96E, #CBF7BE);
+					padding: 0 5px;
+					border: 1px solid black;
+					border-radius: 5px;
+
+					li {
+						border-bottom: 1px solid black;
+						padding: 5px 0;
+
+						&:hover {
+							background: rgba(0,0,0,.2);
+							cursor: pointer;
+						}
+					}
+				}
+			}
+
+			button {
+				margin-top: 10px;
+				width: 100%;
+				background: transparent;
+				padding: 5px;
+				font-size: 1.1em;
+				.border-inset();
+			}
+		}	
+	}
+}
