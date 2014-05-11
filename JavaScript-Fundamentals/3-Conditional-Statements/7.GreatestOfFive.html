@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Greatest of Five</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+	<style>
+		input[type=text] {
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="user-input">
+		<label for="first">First: </label>
+		<input type="text" id="first" />
+		<label for="second">Second: </label>
+		<input type="text" id="second" />
+		<label for="third">Third: </label>
+		<input type="text" id="third" />
+		<label for="fourth">Fourth: </label>
+		<input type="text" id="fourth" />
+		<label for="fifth">Fifth: </label>
+		<input type="text" id="fifth" />
+		<input type="submit" onclick="findMaxNumber()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("7. Write a script that finds the greatest of given 5 variables.");
+		function findMaxNumber() {
+			var maxNumber = Number.MIN_VALUE;
+			var numbers = [];
+			numbers[0] = jsConsole.readFloat("#first");
+			numbers[1] = jsConsole.readFloat("#second");
+			numbers[2] = jsConsole.readFloat("#third");
+			numbers[3] = jsConsole.readFloat("#fourth");
+			numbers[4] = jsConsole.readFloat("#fifth");
+
+			for (var i = 0; i < numbers.length; i++) {
+				if (numbers[i] > maxNumber) {
+					maxNumber = numbers[i];
+				}
+			}
+
+			jsConsole.writeLine("Max number: " + maxNumber);
+		}
+	</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Calculator</title>
@@ -30,40 +31,36 @@
 					<input type="text" id="result" readonly="readonly" value="8854455" />
 				</div>
 				<div class="bitViewer">
-					<table>
-						<tbody>
-							<tr>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-								<td>0000</td>
-							</tr>
-							<tr>
-								<td class="bitLabel" colspan="4">63</td>
-								<td class="bitLabel" colspan="3">47</td>
-								<td class="bitLabel">32</td>
-							</tr>
-							<tr>
-								<td>0000</td>
-								<td>0000</td>
-								<td>1000</td>
-								<td>0111</td>
-								<td>0001</td>
-								<td>1011</td>
-								<td>1011</td>
-								<td>0111</td>
-							</tr>
-							<tr>
-								<td class="bitLabel" colspan="4">31</td>
-								<td class="bitLabel" colspan="3">15</td>
-								<td class="bitLabel">0</td>
-							</tr>
-						</tbody>
-					</table>
+					<div>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+						<span>0000</span>
+					 </div>
+					<div>
+						<span>63</span>
+						<span>47</span>
+						<span>32</span>
+					 </div>
+					<div>
+						<span>0000</span>
+						<span>0000</span>
+						<span>1000</span>
+						<span>0111</span>
+						<span>0001</span>
+						<span>1011</span>
+						<span>1011</span>
+						<span>0111</span>
+					</div>
+					<div>
+						<span>31</span> 
+						<span>15</span> 
+						<span>0</span>
+					</div>
 				</div>
 				<div class="options">
 					<div class="numericSystem">
@@ -88,54 +85,53 @@
 					</div>
 				</div>				
 				<div class="keyboard">
-					<button type="button">s</button>
-					<button type="button">Mod</button>
+					<button type="button">&nbsp;</button>
+					<button type="button" class="active opperation">Mod</button>
 					<button type="button">A</button>
-					<button type="button">MC</button>
-					<button type="button">MR</button>
-					<button type="button">MS</button>
-					<button type="button">M+</button>
-					<button type="button">M-</button>
-					<button type="button">(</button>
-					<button type="button">)</button>
+					<button type="button" class="active memory">MC</button>
+					<button type="button" class="active memory">MR</button>
+					<button type="button" class="active memory">MS</button>
+					<button type="button" class="active memory">M+</button>
+					<button type="button" class="active memory">M-</button>
+					<button type="button" class="active opperation">(</button>
+					<button type="button" class="active opperation">)</button>
 					<button type="button">B</button>
-					<button type="button">←</button>
-					<button type="button">CE</button>
-					<button type="button">C</button>
-					<button type="button" class="underscore">+</button>
+					<button type="button" class="active opperation">←</button>
+					<button type="button" class="active opperation">CE</button>
+					<button type="button" class="active opperation">C</button>
+					<button type="button" class="active opperation">+</button>
 					<button type="button">√</button>
-					<button type="button">RoL</button>
-					<button type="button">RoR</button>
+					<button type="button" class="active opperation">RoL</button>
+					<button type="button" class="active opperation">RoR</button>
 					<button type="button">C</button>
-					<button type="button">7</button>
-					<button type="button">8</button>
-					<button type="button">9</button>
-					<button type="button">/</button>
+					<button type="button" class="active number">7</button>
+					<button type="button" class="active number">8</button>
+					<button type="button" class="active number">9</button>
+					<button type="button" class="active opperation">/</button>
 					<button type="button">%</button>
-					<button type="button">Or</button>
-					<button type="button">Xor</button>
+					<button type="button" class="active opperation">Or</button>
+					<button type="button" class="active opperation">Xor</button>
 					<button type="button">D</button>
-					<button type="button">4</button>
-					<button type="button">5</button>
-					<button type="button">6</button>
-					<button type="button">*</button>
+					<button type="button" class="active number">4</button>
+					<button type="button" class="active number">5</button>
+					<button type="button" class="active number">6</button>
+					<button type="button" class="active opperation">*</button>
 					<button type="button">1/x</button>
-					<button type="button">Lsh</button>
-					<button type="button">Rsh</button>
+					<button type="button" class="active opperation">Lsh</button>
+					<button type="button" class="active opperation">Rsh</button>
 					<button type="button">E</button>
-					<button type="button">1</button>
-					<button type="button">2</button>
-					<button type="button">3</button>
-					<button type="button">-</button>
-					<button type="button" class="doubleHeight">=</button>
-					<button type="button">Not</button>
-					<button type="button">And</button>
+					<button type="button" class="active number">1</button>
+					<button type="button" class="active number">2</button>
+					<button type="button" class="active number">3</button>
+					<button type="button" class="active opperation">-</button>
+					<button type="button" class="doubleHeight active opperation">=</button>
+					<button type="button" class="active opperation">Not</button>
+					<button type="button" class="active opperation">And</button>
 					<button type="button">F</button>
-					<button type="button" class="doubleWidth">0</button>
+					<button type="button" class="doubleWidth active number">0</button>
 					<button type="button">.</button>
-					<button type="button">+</button>
+					<button type="button" class="active opperation">+</button>
 				</div>
-				<div class="clear">end of calculator</div>
 			</div>
 		</div>
 	</div>

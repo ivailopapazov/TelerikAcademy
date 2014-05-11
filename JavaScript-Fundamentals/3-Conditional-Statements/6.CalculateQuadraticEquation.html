@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quadratic Equation Solver</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="coeffA">Coefficient a: </label>
+		<input type="text" id="coeffA" />
+		<label for="coeffB">Coefficient b: </label>
+		<input type="text" id="coeffB" />
+		<label for="coeffC">Coefficient c: </label>
+		<input type="text" id="coeffC" />
+		<input type="submit" onclick="sortNumbers()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Sort 3 real values in descending order using nested if statements.");
+		function sortNumbers() {
+			var coeffA = jsConsole.readFloat("#coeffA");
+			var coeffB = jsConsole.readFloat("#coeffB");
+			var coeffC = jsConsole.readFloat("#coeffC");
+
+			var discriminant = Math.sqrt(coeffB * coeffB - 4 * coeffA * coeffC);
+
+			if (discriminant > 0) {
+				var root1 =  (-coeffB + discriminant) / 2 * coeffA;
+				var root2 =  (-coeffB - discriminant) / 2 * coeffA;
+				jsConsole.writeLine("x1 = " + root1);
+				jsConsole.writeLine("x2 = " + root2);
+			}
+			else if (discriminant == 0) {
+				var root = -coeffB / (2 * coeffA)
+				jsConsole.writeLine("x = " + root);
+			}
+			else {
+				jsConsole.writeLine("No real roots!");
+			}
+		}
+	</script>
+</body>
+</html>

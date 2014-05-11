@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort 3 Read Numbers</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="number-1">First Number: </label>
+		<input type="text" id="number-1" />
+		<label for="number-2">Second Number: </label>
+		<input type="text" id="number-2" />
+		<label for="number-3">Third Number: </label>
+		<input type="text" id="number-3" />
+		<input type="submit" onclick="sortNumbers()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Sort 3 real values in descending order using nested if statements.");
+		function sortNumbers() {
+			var firstNumber = jsConsole.readFloat("#number-1");
+			var secondNumber = jsConsole.readFloat("#number-2");
+			var thirdNumber = jsConsole.readFloat("#number-3");
+
+			if (firstNumber > secondNumber) {
+				if (firstNumber > thirdNumber) {
+					if (secondNumber > thirdNumber) {
+						jsConsole.writeLine(firstNumber + " " + secondNumber + " " + thirdNumber);
+					}
+					else {
+						jsConsole.writeLine(firstNumber + " " + thirdNumber + " " + secondNumber);
+					}
+				}
+				else {
+					jsConsole.writeLine(thirdNumber + " " + firstNumber + " " + secondNumber);
+				}
+			}
+			else {
+				if (secondNumber > thirdNumber) {
+					if (firstNumber > thirdNumber) {
+						jsConsole.writeLine(secondNumber + " " + firstNumber + " " + thirdNumber);
+					}
+					else {
+						jsConsole.writeLine(secondNumber + " " + thirdNumber + " " + firstNumber);
+					}
+				}
+				else {
+					jsConsole.writeLine(thirdNumber + " " + secondNumber + " " + firstNumber);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find Bit Three</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<label for="number">number: </label>
+	<input type="text" id="number" />
+	<input type="submit" onclick="checkBit3()" />
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("5.Write a boolean expression for finding if the bit 3 (counting from 0) of a given integer is 1 or 0.");
+		function checkBit3() {
+			var number = jsConsole.readInteger("#number");
+			if (((number >> 3) & 1) == 0) {
+				jsConsole.writeLine("Bit 3 of the number " + number + " is 0");
+			}
+			else {
+				jsConsole.writeLine("Bit 3 of the number " + number + " is 1");
+			}
+		}
+	</script>
+</body>
+</html>

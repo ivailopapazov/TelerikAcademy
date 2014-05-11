@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parity of a number</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<label for="number">Enter a number: </label>
+	<input type="text" id="number" />
+	<input type="submit" onclick="checkNumber()" />
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("1.Write an expression that checks if given integer is odd or even.");
+		function checkNumber() {
+			var number = jsConsole.readInteger("#number");
+			if (number % 2) {
+				jsConsole.writeLine("The number " + number + " is odd");
+			}
+			else {
+				jsConsole.writeLine("The number " + number + " is even");
+			}
+		}
+	</script>
+</body>
+</html>

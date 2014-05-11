@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exchange variable values</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="number-1">First Number: </label>
+		<input type="text" id="number-1" />
+		<label for="number-2">Second Number: </label>
+		<input type="text" id="number-2" />
+		<input type="submit" onclick="findMaxNumber()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("1. Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.");
+		function findMaxNumber() {
+			var firstNumber = jsConsole.readInteger("#number-1");
+			var secondNumber = jsConsole.readInteger("#number-2");
+
+			if (firstNumber > secondNumber) {
+				var temp = firstNumber;
+				firstNumber = secondNumber;
+				secondNumber = temp;
+			}
+
+			jsConsole.writeLine("First Number: " + firstNumber);
+			jsConsole.writeLine("Second Number: " + secondNumber);
+		}
+	</script>
+</body>
+</html>

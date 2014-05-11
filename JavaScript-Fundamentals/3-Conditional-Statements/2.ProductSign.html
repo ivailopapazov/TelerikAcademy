@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Sign</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="number-1">First Number: </label>
+		<input type="text" id="number-1" />
+		<label for="number-2">Second Number: </label>
+		<input type="text" id="number-2" />
+		<label for="number-3">Third Number: </label>
+		<input type="text" id="number-3" />
+		<input type="submit" onclick="findProductSign()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("2. Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.");
+		function findProductSign() {
+			var firstNumber = jsConsole.readFloat("#number-1");
+			var secondNumber = jsConsole.readFloat("#number-2");
+			var thirdNumber = jsConsole.readFloat("#number-3");
+
+			if (((firstNumber < 0) ^ (secondNumber < 0)) ^ thirdNumber < 0) {
+				jsConsole.writeLine("The product has negative sign");
+			}
+			else {
+				jsConsole.writeLine("The product has positive sign");
+			}
+		}
+	</script>
+</body>
+</html>

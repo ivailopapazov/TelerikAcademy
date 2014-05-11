@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DataType</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		// Exercise 1
+		jsConsole.writeLine("1. Assign all the possible JavaScript literals to different variables.");
+		jsConsole.writeLine("I'm sorry but you have to refere to the actual code to see the variable declarations.");
+		
+		// String
+		var doubleQuoteStringLiteral = "'How you doin'?', Joey said.";
+		var singleQuoteStringLiteral = 'string';
+
+		// Number
+		var integerNumberLiteral = 13;
+		var floatNumberLiteral = 3.14;
+		var hexNumberLiteral = 0xFF;
+		var octNumberLiteral = 055;
+		var nanNumberLiteral = NaN; // Not sure if this is a literal or a global property.
+		var infNumberLiteral = Infinity; // Same goes here.
+
+		// Boolean
+		var trueBooleanLiteral = true;
+		var falseBooleanLiteral = false;
+
+		// Function
+		var functionLiteral = function(param) { return param + 1; }
+
+		// Array
+		var arrayLiteral = [1, 2, 3];
+
+		// Object
+		var objectLiteral = { property: "value", method: functionLiteral };
+
+
+		// Exercise 2
+		jsConsole.writeLine("2.Create a string variable with quoted text in it.");
+		jsConsole.writeLine(doubleQuoteStringLiteral);
+
+		// Exercise 3
+		jsConsole.writeLine("3.Try typeof on all variables you created.")
+		jsConsole.writeLine("typeof('string') - " + typeof(singleQuoteStringLiteral));
+		jsConsole.writeLine("typeof(13) - " + typeof(integerNumberLiteral));
+		jsConsole.writeLine("typeof(3.14) - " + typeof(floatNumberLiteral));
+		jsConsole.writeLine("typeof(0xFF) - " + typeof(hexNumberLiteral));
+		jsConsole.writeLine("typeof(055) - " + typeof(octNumberLiteral));
+		jsConsole.writeLine("typeof(NaN) - " + typeof(nanNumberLiteral));
+		jsConsole.writeLine("typeof(Infinity) - " + typeof(infNumberLiteral));
+		jsConsole.writeLine("typeof(true) - " + typeof(trueBooleanLiteral));
+		jsConsole.writeLine("typeof(function(param) { return param + 1; }) - " + typeof(functionLiteral));
+		jsConsole.writeLine("typeof([1, 2, 3]) - " + typeof(arrayLiteral));
+		jsConsole.writeLine('typeof({ property: "value", method: functionLiteral }) - ' + typeof(objectLiteral));
+
+		// Exercise 4
+		jsConsole.writeLine("4.Create null, undefined variables and try typeof on them.")
+
+		var nullLiteral = null;
+		var undefinedLiteral = undefined;
+
+		jsConsole.writeLine("typeof(null) - " + typeof(nullLiteral));
+		jsConsole.writeLine("typeof(undefined) - " + typeof(undefinedLiteral));
+		
+	</script>
+</body>
+</html>

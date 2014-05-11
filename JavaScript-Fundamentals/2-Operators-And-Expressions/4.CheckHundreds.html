@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rectangles Area</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<label for="number">number: </label>
+	<input type="text" id="number" />
+	<input type="submit" onclick="checkHundreds()" />
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4.Write an expression that checks for given integer if its third digit (right-to-left) is 7.");
+		function checkHundreds() {
+			var number = jsConsole.readInteger("#number");
+			if (~~(number / 100) % 10 == 7) {
+				jsConsole.writeLine(number + " has 7 in hundreds - true");
+			}
+			else {
+				jsConsole.writeLine(number + " has 7 in hundreds - false");
+			}
+		}
+	</script>
+</body>
+</html>
