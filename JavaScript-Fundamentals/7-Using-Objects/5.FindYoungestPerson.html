@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("5.Write a function that finds the youngest person in a given array of persons and prints his/hers full name.");
+		(function() {
+			var persons = [
+				{ firstname : 'Gosho', lastname: 'Petrov', age: 32 }, 
+				{ firstname : 'Pesho', lastname: 'Ivanov', age: 81},
+				{ firstname : 'Niki', lastname: 'Petkov', age: 20},
+				{ firstname : 'Vladi', lastname: 'Todorov', age: 21},
+				{ firstname : 'Toshko', lastname: 'Marinov', age: 24},
+				{ firstname : 'Mimi', lastname: 'Gancheva', age: 42},
+				{ firstname : 'Ani', lastname: 'Bliznakova', age: 18},
+			];
+
+			var minAge = Number.MAX_VALUE;
+			var index;
+			for (var i = 0; i < persons.length; i++) {
+				jsConsole.writeLine("{firstname: " + persons[i].firstname + ", lastname: " + 
+					persons[i].lastname + ", age: " + persons[i].age + "}");
+				if (minAge > persons[i].age) {
+					minAge = persons[i].age;
+					index = i;
+				};
+			}
+
+			jsConsole.writeLine("Youngest person is: " + persons[index].firstname + " " + persons[index].lastname);
+		})();
+	</script>
+</body>
+</html>

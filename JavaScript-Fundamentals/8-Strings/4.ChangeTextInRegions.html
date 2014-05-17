@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="text">Text: </label>
+		<input type="text" id="text" style="width: 700px;" value="We are <mixcase>living</mixcase> in a <upcase>yellow 
+submarine</upcase>. We <mixcase>don't</mixcase> have 
+<lowcase>anything</lowcase> else." />
+		<input type="submit" onclick="onClickChangeRegionText()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. You are given a text. Write a function that changes the text in all regions.");
+
+		function onClickChangeRegionText() {
+			var text = jsConsole.read("#text");
+
+			var result = changeRegionText(text);
+
+			jsConsole.writeLine(result);
+		}
+
+		function Region(name, transform) {
+			this.open = "<" + name + ">";
+			this.close = "</" + name + ">";
+			this.transform = transform;
+		}
+
+		function changeRegionText(text) {
+			var upcase = new Region("upcase", function(string) { return string.toUpperCase(); });
+			var lowcase = new Region("lowcase", function(string) { return string.toLowerCase(); });
+			var mixcase = new Region("mixcase", function(string) { 
+				var mixedString = "";
+				for (var i = 0; i < string.length; i++) {
+					if (Math.random() < .5) {
+						mixedString = string[i].toUpperCase();
+					}
+					else {
+						mixedString = string[i].toLowerCase();
+					}
+				}
+				
+				return mixedString;
+			});
+
+			var regions = [upcase, lowcase, mixcase];
+			var applyRegionCasing = [];
+			var newText = "";
+
+			for (var i = 0; i < text.length; i++) {
+				// Find region and push it to the stack
+				if (text[i] === '<') {
+					for (var j = 0; j < regions.length; j++) {
+						if (text.substr(i, regions[j].open.length) == regions[j].open) {
+							applyRegionCasing.push(regions[j]);
+							i += regions[j].open.length;
+						}
+						else if (text.substr(i, regions[j].close.length) == regions[j].close) {
+							applyRegionCasing.pop(regions[j]);
+							i += regions[j].close.length;
+						}
+					}
+				}
+
+				// Apply stack styles (from inside out)
+				var nextChar = text[i];
+				for (var k = applyRegionCasing.length - 1; k >= 0; k--) {
+					nextChar = applyRegionCasing[k].transform(nextChar);
+				}
+
+				newText += nextChar;
+			}
+
+			return newText;
+		}
+	</script>
+</body>
+</html>

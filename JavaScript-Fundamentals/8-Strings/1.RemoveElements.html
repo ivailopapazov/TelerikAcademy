@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="word">Word: </label>
+		<input type="text" id="word" value="example" />
+		<input type="submit" onclick="onClickReverseString()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("1. WriteWrite a JavaScript function reverses string and returns it.");
+		function onClickReverseString() {
+			var word = jsConsole.read("#word");
+
+			var reversedWord = reverseString(word);
+
+			jsConsole.writeLine(word + " -> " + reversedWord);
+		}
+
+		function reverseString(word) {
+			return word.split("").reverse().join("");
+		}
+	</script>
+</body>
+</html>

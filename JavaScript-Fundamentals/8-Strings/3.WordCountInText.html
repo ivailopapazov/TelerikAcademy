@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="text">Text: </label>
+		<input type="text" id="text" style="width: 500px;" value="We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days." />
+		<label for="word">Word: </label>
+		<input type="text" id="word" value="in" />
+		<input type="submit" onclick="onClickCountWords()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("3. Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).");
+
+		function onClickCountWords() {
+			var text = jsConsole.read("#text");
+			var word = jsConsole.read("#word");
+
+			jsConsole.writeLine("The result is: " + substringCount(text, word));
+			jsConsole.writeLine("Regex result is: " + substringCountRegex(text, word));
+		}
+
+		function substringCount(string, key) {
+			var index = string.indexOf(key);
+			var count = 0;
+			string = string.toLowerCase();
+			key = key.toLowerCase();
+
+			while (index !== -1) {
+				count++;
+				index = string.indexOf(key, index + 1);
+			}
+
+			return count;
+		}
+
+		function substringCountRegex(string, key) {
+			var pattern = new RegExp(key, "gi");
+
+			var result = string.match(pattern);
+
+			return result.length;
+		}
+	</script>
+</body>
+</html>

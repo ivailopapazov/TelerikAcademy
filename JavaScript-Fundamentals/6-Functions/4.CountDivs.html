@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="first">
+		<div class="second">s</div>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Write a function to count the number of divs on the web page.");
+		(function() {
+			var divTags = document.getElementsByTagName("div");
+			jsConsole.writeLine("Div Count: " + divTags.length);
+		})();
+	</script>
+</body>
+</html>

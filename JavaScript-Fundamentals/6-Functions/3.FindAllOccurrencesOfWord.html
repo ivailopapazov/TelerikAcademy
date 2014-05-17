@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="text">Text: </label>
+		<textarea id="text" cols="30" rows="10"></textarea>
+		<label for="word">Word: </label>
+		<input type="word" id="word" />
+		<input type="submit" onclick="onClickSearchWord()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("3. Write a function that finds all the occurrences of word in a text.");
+		function onClickSearchWord() {
+			var text = jsConsole.read("#text");
+			var word = jsConsole.read("#word");
+
+			var caseSensitiveOccurrences = countWordsInText(text, word, true);
+			jsConsole.writeLine("Case Sensitive Search: " + caseSensitiveOccurrences);
+			var caseInsensitiveOccurrences = countWordsInText(text, word);
+			jsConsole.writeLine("Case Insensitive Search: " + caseInsensitiveOccurrences);
+		}
+
+		function countWordsInText(text, word, caseSensitive) {
+			var re;
+			switch(arguments.length) {
+				case 0:
+				case 1: throw "ArgumentException: Missing arguments! :)";
+				default: 
+					if (caseSensitive) {
+						re = new RegExp(word, "g");
+					}
+					else {
+						re = new RegExp(word, "gi");
+					}
+
+					var occurrences = text.match(re);
+					return occurrences.length;
+			}
+		}
+	</script>
+</body>
+</html>

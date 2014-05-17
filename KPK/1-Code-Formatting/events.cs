@@ -128,6 +128,7 @@ class Program
                 {
                     break;
                 }
+                
                 Messages.PrintEvent(eventToShow);
                 showed++;
             }

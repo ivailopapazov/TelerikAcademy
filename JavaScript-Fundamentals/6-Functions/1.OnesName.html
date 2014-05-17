@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="number">Number: </label>
+		<input type="text" id="number" />
+		<input type="submit" onclick="printOnesDigitName()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("1. Write a function that returns the last digit of given integer as an English word.");
+		function printOnesDigitName() {
+			var number = jsConsole.readInteger("#number");
+
+			var onesDigit = number % 10;
+			var onesDigitName = getDigitName(onesDigit);
+
+			jsConsole.writeLine(onesDigitName);
+		}
+
+		function getDigitName(digit) {
+			switch(digit) {
+				case 1: return "One";
+				case 2: return "Two";
+				case 3: return "Three";
+				case 4: return "Four";
+				case 5: return "Five";
+				case 6: return "Six";
+				case 7: return "Seven";
+				case 8: return "Eight";
+				case 9: return "Nine";
+				case 0: return "Zero";
+			}
+		}
+	</script>
+</body>
+</html>

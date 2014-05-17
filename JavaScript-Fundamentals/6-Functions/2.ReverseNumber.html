@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="number">Number: </label>
+		<input type="text" id="number" />
+		<input type="submit" onclick="printReversedNumber()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("2. Write a function that reverses the digits of given decimal number.");
+		function printReversedNumber() {
+			var number = document.getElementById("number").value;
+			
+			var reversedNumber = reverseString(number);
+
+			jsConsole.writeLine(reversedNumber);
+		}
+
+		function reverseString(str) {
+			return str.split("").reverse().join("");
+		}
+	</script>
+</body>
+</html>

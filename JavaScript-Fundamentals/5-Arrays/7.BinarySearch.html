@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<label for="element">Element: </label>
+		<input type="text" id="element" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="onClickPrintIndex()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine('7. Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm.');
+		function onClickPrintIndex() {
+			var strSequence = document.getElementById("sequence").value;
+			var element = document.getElementById("element").value;
+			var sequence = strSequence.split(",");
+
+			// Sort the array
+			sequence.sort(function(a, b) { return a - b; });
+			
+			// Find elements index
+			var index = binarySearch(sequence, element, 0, sequence.length - 1);
+
+			// Print index
+			jsConsole.writeLine(index);
+		}
+
+		// Recursive binary search algorithm
+		function binarySearch(sequence, element, min, max) {
+			if (max < min) {
+				return;
+			}
+
+			var mid = Math.floor((max + min) / 2)
+			if (sequence[mid] > element) {
+				return binarySearch(sequence, element, min, mid);
+			}
+			else if (sequence[mid] < element) {
+				return binarySearch(sequence, element, mid + 1, max);
+			}
+			else {
+				return mid;
+			}
+		}
+	</script>
+</body>
+</html>

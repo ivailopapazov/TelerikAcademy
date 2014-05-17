@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="onClickFindSeq()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Write a script that finds the maximal increasing sequence in an array.");
+		function onClickFindSeq() {
+			var strSequence = document.getElementById("sequence").value;
+			var sequence = strSequence.split(",");
+
+			// Parse elements to numbers
+			for (var i = 0; i < sequence.length; i++) {
+				sequence[i] = parseInt(sequence[i]);
+			}
+
+			var maxIncreasingSequence = findMaxIncreasingSequence(sequence);
+
+			jsConsole.writeLine("{" + maxIncreasingSequence.join(", ") + "}")
+		}
+
+		function findMaxIncreasingSequence(sequence) {
+			var currentElement = sequence[0];
+			var startElement = sequence[0];
+			var currentStartElement = sequence[0];
+			var count = 1;
+			var maxCount = 1;
+			var maxIncreasingSequence = [];
+
+			for (var i = 1; i < sequence.length; i++) {
+				currentElement++;
+				if (currentElement == sequence[i]) {
+					count++;
+					if (count > maxCount) {
+						maxCount = count;
+						startElement = currentStartElement;
+					}
+				}
+				else {
+					currentStartElement = sequence[i];
+					currentElement = currentStartElement;
+					count = 1;
+				}
+			}
+
+			// Generate max increasing sequence
+			for (var i = 0; i < maxCount; i++) {
+				maxIncreasingSequence.push(startElement + i);
+			}
+
+			return maxIncreasingSequence;
+		}
+	</script>
+</body>
+</html>

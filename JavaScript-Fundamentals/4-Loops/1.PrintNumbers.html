@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Numbers</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="maxNumber">maxNumber: </label>
+		<input type="text" id="maxNumber" />
+		<input type="submit" onclick="printNumbers()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("1. Write a script that prints all the numbers from 1 to N");
+		function printNumbers() {
+			var maxNumber = jsConsole.readInteger("#maxNumber");
+			for (var i = 1; i <= maxNumber; i++) {
+				jsConsole.write(i + " ");
+			}
+
+			jsConsole.writeLine("");
+		}
+	</script>
+</body>
+</html>

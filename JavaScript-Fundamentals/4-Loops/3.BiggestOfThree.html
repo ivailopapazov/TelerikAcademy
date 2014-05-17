@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Numbers not Divisible by 21</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="printMaxAndMin()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("3. Write a script that finds the max and min number from a sequence of numbers");
+		function printMaxAndMin() {
+			var currentNumber;
+			var minNumber = Number.MAX_VALUE;
+			var maxNumber = Number.MIN_VALUE;
+			var strSequence = document.getElementById("sequence").value;
+			var sequence = strSequence.split(",");
+
+			for (var i = 0; i < sequence.length; i++) {
+				currentNumber = parseInt(sequence[i]);
+				
+				if (minNumber > currentNumber) {
+					minNumber = currentNumber;
+				}
+
+				if (maxNumber < currentNumber) {
+					maxNumber = currentNumber;
+				}
+			}
+
+			jsConsole.writeLine("Min: " + minNumber + " Max: " + maxNumber);
+		}
+	</script>
+</body>
+</html>

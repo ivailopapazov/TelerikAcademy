@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="property">Property: </label>
+		<input type="text" id="property" value="name" />
+		<input type="submit" onclick="onClickCheckForProperty()" />
+		<span>Comma separated list of numbers.</span>
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Write a function that checks if a given object contains a given property.");
+		function onClickCheckForProperty() {
+			var property = jsConsole.read("#property");
+			var obj = {
+				name: "Pesho",
+				age: 25,
+				sex: "male",
+				toString: function() {
+					return "{name: " + this.name +", age: " + this.age + ", sex: " + this.sex + "}";
+				},
+			};
+
+			var hasProperty = checkForProperty(obj, property);
+			jsConsole.writeLine(obj + " contains property " + property + " - " + hasProperty);
+		}
+
+		function checkForProperty(object, property) {
+			for (var prop in object) {
+				if (prop == property) {
+					return true;
+				}
+			}
+
+			return false
+		}
+	</script>
+</body>
+</html>

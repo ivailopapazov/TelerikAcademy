@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<label for="index">Position: </label>
+		<input type="text" id="index" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="onClickCompareToNeighbors()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine('6. Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).');
+		function onClickCompareToNeighbors() {
+			var sequence = jsConsole.read("#sequence").split(",");
+			var index = jsConsole.readInteger("#index");
+
+			var isBigger = compareToNeighbors(sequence, index);
+			jsConsole.writeLine("Number on position " + index + " bigger than it's neighbors: " + isBigger);
+		}
+
+		function compareToNeighbors(sequence, index) {
+			var isBigger = true;
+			var element = sequence[index];
+			if (index > 0 && element < sequence[index - 1]) {
+				isBigger = false;
+			}
+			
+			if (index < sequence.length - 1 && element < sequence[index + 1]) {
+				isBigger = false;
+			}
+
+			return isBigger;
+		}
+	</script>
+</body>
+</html>

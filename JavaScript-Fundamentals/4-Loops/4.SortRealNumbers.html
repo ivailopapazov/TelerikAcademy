@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Numbers not Divisible by 21</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("4. Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects.");
+		(function() {
+			var smallest;
+			var largest;
+
+			var objs = [document, window, navigator];
+			for (var i = 0; i < objs.length; i++) {
+				for (prop in objs[i]) {
+					if (smallest > prop || smallest === undefined) {
+						smallest = prop;
+					}
+
+					if (largest < prop || largest === undefined) {
+					 	largest = prop;
+					}
+				}
+			} 
+
+			jsConsole.writeLine("Smallest: " + smallest + " Largest: " + largest);
+		})();
+	</script>
+</body>
+</html>

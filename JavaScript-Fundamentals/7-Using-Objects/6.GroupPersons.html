@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("6.Write a function that groups an array of persons by age, first or last name. The function must return an associative array, with keys - the groups, and values -arrays with persons in this groups.");
+		jsConsole.writeLine("Open the console (hit f12).")
+		(function() {
+			var persons = [
+				{ firstname : 'Gosho', lastname: 'Petrov', age: 32 }, 
+				{ firstname : 'Pesho', lastname: 'Ivanov', age: 81},
+				{ firstname : 'Niki', lastname: 'Petkov', age: 20},
+				{ firstname : 'Vladi', lastname: 'Todorov', age: 21},
+				{ firstname : 'Toshko', lastname: 'Marinov', age: 24},
+				{ firstname : 'Mimi', lastname: 'Gancheva', age: 42},
+				{ firstname : 'Ani', lastname: 'Bliznakova', age: 18},
+				{ firstname : 'Gosho', lastname: 'Todorov', age: 81 }, 
+				{ firstname : 'Pesho', lastname: 'Marinov', age: 20},
+				{ firstname : 'Vladi', lastname: 'Petkov', age: 42},
+			];
+
+			console.log(group(persons, "firstname"));
+			console.log(group(persons, "lastname"));
+			console.log(group(persons, "age"));
+
+		})();
+
+		function group(persons, groupName) {
+			var groups = {};
+
+			for (var i = 0; i < persons.length; i++) {
+				if (!groups[persons[i][groupName]]) {
+					groups[persons[i][groupName]] = [];
+				}
+
+				groups[persons[i][groupName]].push(persons[i]);
+			}
+
+			return groups;
+		}
+	</script>
+</body>
+</html>

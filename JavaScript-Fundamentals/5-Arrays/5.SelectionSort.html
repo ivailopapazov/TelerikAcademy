@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="onClickPrintSorted()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine('5. Sorting an array means to arrange its elements in increasing order. Write a script to sort an array. Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.');
+		function onClickPrintSorted() {
+			var strSequence = document.getElementById("sequence").value;
+			var sequence = strSequence.split(",");
+
+			// Parse elements to numbers
+			for (var i = 0; i < sequence.length; i++) {
+				sequence[i] = parseInt(sequence[i]);
+			}
+
+			selectionSort(sequence);
+			jsConsole.writeLine("{" + sequence.join(", ") + "}");
+
+
+		}
+
+		function selectionSort(sequence) {
+			var pos, i, minElement, minElementIndex;
+
+			for (var pos = 0; pos < sequence.length - 1; pos++) {
+				minElement = sequence[pos];
+				minElementIndex = pos;
+
+				for (var i = pos + 1; i < sequence.length; i++) {
+					if (minElement > sequence[i]) {
+						minElement = sequence[i];
+						minElementIndex = i;
+					}
+				}
+
+				if (minElementIndex != pos) {
+					swapElements(sequence, pos, minElementIndex)
+				}
+			}		
+		}
+
+		function swapElements(arr, first, second) {
+			var tempElement = arr[first];
+			arr[first] = arr[second];
+			arr[second] = tempElement;
+		}
+	</script>
+</body>
+</html>

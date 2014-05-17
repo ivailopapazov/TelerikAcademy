@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("3. Write a function that makes a deep copy of an object.");
+		(function() {
+			var human = {
+				name: "Vankata",
+				age: 25,
+				hair: {
+					type: "straight",
+					color: "brown",
+				},
+				grades: [2, 2, 3, 2, 3, 2],
+			}
+
+			var vankata = deepCopy(human);
+			jsConsole.writeLine("vankata === human: " + (vankata === human));
+		})();
+
+
+		function deepCopy(obj) {
+			var objCopy = {};
+			for (var prop in obj) {
+				if (typeof(obj[prop]) == "object") {
+					objCopy[prop] = deepCopy(obj[prop]);
+				}
+				else {
+					objCopy[prop] = obj[prop];
+				}
+			}
+
+			return objCopy;
+		}
+	</script>
+</body>
+</html>

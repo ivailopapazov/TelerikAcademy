@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="sequence">Sequence: </label>
+		<input type="text" id="sequence" />
+		<span>Comma separated list of numbers.</span>
+		<input type="submit" onclick="onClickPrintFrequentNumber()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine('6. Write a program that finds the most frequent number in an array.');
+		function onClickPrintFrequentNumber() {
+			var strSequence = document.getElementById("sequence").value;
+			var sequence = strSequence.split(",");
+			var elementsCount = [];
+			var frequency = 0
+			var number;
+
+			// Create number frequency array: elementsCount [number => frequency]
+			for (var i = 0; i < sequence.length; i++) {
+				sequence[i] = parseInt(sequence[i]);
+				if (isFinite(elementsCount[sequence[i]])) {
+					elementsCount[sequence[i]]++;
+				}
+				else {
+					elementsCount[sequence[i]] = 1;
+				}
+			}
+
+			// Find the number with the greatest frequency
+			for (index in elementsCount) {
+				if (frequency < elementsCount[index]) {
+					frequency = elementsCount[index];
+					number = index;
+				}
+			}
+
+			jsConsole.writeLine("Most frequent number: " + number + ", frequency: " + frequency);
+		}
+	</script>
+</body>
+</html>
