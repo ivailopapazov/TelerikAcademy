@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="text">Text: </label>
+		<input type="text" id="text" style="width: 500px;" value="<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>" />
+		<input type="submit" onclick="printTextWithinTags()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("6. Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:");
+
+		function printTextWithinTags() {
+			var text = jsConsole.read("#text");
+			var textWithinTags = "";
+			var tagStack = [];
+			var currentTag = "";
+
+			for (var i = text.indexOf('<'); i < text.length; i++) {
+				while (text[i] === '<') {
+					currentTag = getTagName(text, i);
+					if (text[i+1] === '/') {
+						tagStack.pop();
+					}
+					else {
+						tagStack.push(currentTag);
+					}
+					
+					i += currentTag.length;
+				}
+
+				if (tagStack.length > 0) {
+					textWithinTags += text[i];
+				}
+			}
+
+			jsConsole.writeLine(textWithinTags);
+		}
+
+		function getTagName(text, start) {
+			return text.substring(start, text.indexOf('>', start) + 1);
+		}
+	</script>
+</body>
+</html>

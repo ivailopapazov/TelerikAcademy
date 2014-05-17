@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Strings</title>
+	<link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+	<div class="user-input">
+		<label for="url">URL: </label>
+		<input type="text" id="url" style="width: 500px;" value="http://www.devbg.org/forum/index.php" />
+		<input type="submit" onclick="onClickParseURL()" />
+	</div>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		jsConsole.writeLine("7. Write a script that parses an URL address given in the format:");
+
+		function onClickParseURL() {
+			var url = jsConsole.read("#url");
+
+			var parsedURL = parseURL(url);
+
+			console.log(parsedURL);
+			jsConsole.writeLine("Open console! F12");
+		}
+
+		function parseURL(str) {
+			var firstIndex = str.indexOf('://');
+			var secondIndex = str.indexOf('/', firstIndex + 3);
+
+			return {
+				protocol: str.substring(0, firstIndex),
+				server: str.substring(firstIndex + 3, secondIndex),
+				resource: str.substring(secondIndex),
+			}
+		}
+	</script>
+</body>
+</html>
