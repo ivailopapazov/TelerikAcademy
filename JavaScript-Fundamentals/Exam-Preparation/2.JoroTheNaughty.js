@@ -66,8 +66,7 @@ function Solve(input) {
 	}
 }
 
-var input = 
-[
+var input = [
 '500 500 1',
 '0 0',
 '1 1',
