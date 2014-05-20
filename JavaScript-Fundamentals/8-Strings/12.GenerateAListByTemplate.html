@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Strings</title>
+    <link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine('12. Write a function that creates a HTML UL using a template for every HTML LI. The source of the list should an array of elements. Replace all placeholders marked with –{…}–   with the value of the corresponding property of the object. ');
+
+        var people = [
+            { name: "Anton", age: 19 },
+            { name: "Ivan", age: 34 },
+            { name: "Renata", age: 18 },
+            { name: "Hristo", age: 23 },
+            { name: "Iordan", age: 57 },
+            { name: "Iordan", age: 37 },
+            { name: "Atanas", age: 23 }];
+
+        var template = document.getElementById("list-item").innerHTML;
+        var peopleList = generateList(people, template);
+        jsConsole.write(peopleList);
+
+        function generateList(array, template) {
+            var resultList = "<ul>";
+            for (var item in array) {
+                
+                resultList += "<li>" +
+                    template.replace("-{name}-", array[item]["name"]).replace("-{age}-", array[item]["age"]) +
+                    "</li>";
+            }
+
+            resultList += "</ul>";
+            return resultList;
+        }
+    </script>
+</body>
+</html>

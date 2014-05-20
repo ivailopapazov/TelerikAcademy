@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Strings</title>
+    <link rel="stylesheet" type="text/css" href="styles/js-console.css" />
+</head>
+<body>
+    <div class="user-input">
+        <label for="text">Text: </label>
+        <input type="text" id="text" style="width: 500px;" value='Some random text with palindromes abba more text neven and more text, lamal, last one exe'/>
+        <input type="submit" onclick="onClickExtractPalindromes()" />
+    </div>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        jsConsole.writeLine('10. Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".');
+
+        function onClickExtractPalindromes() {
+            var text = jsConsole.read("#text");
+            jsConsole.writeLine(extractPalindromes(text));
+        }
+
+        function extractPalindromes(text) {
+            var words = text.replace('.', '').replace(',', '').split(' ');
+            var palindromes = [];
+            for (var i = 0; i < words.length; i++) {
+                if (checkIfPalindrome(words[i])) {
+                    palindromes.push(words[i]);
+                }
+            }
+
+            return palindromes;
+        }
+
+        function checkIfPalindrome(word) {
+            for (var i = 0; i < word.length; i++) {
+                if (word[i] !== word[word.length - i - 1]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
