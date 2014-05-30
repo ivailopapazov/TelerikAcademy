@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. CheffClassRefactor", "01. Cook-Class-Refactor\01. CheffClassRefactor.csproj", "{D0D50A11-6C1F-4039-A7CB-7452DAA6F507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. IfStatementsRefactor", "02. IfStatementsRefactor\02. IfStatementsRefactor.csproj", "{70E5D270-FE20-4A64-8633-ED9E07B7FEF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0D50A11-6C1F-4039-A7CB-7452DAA6F507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D50A11-6C1F-4039-A7CB-7452DAA6F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D50A11-6C1F-4039-A7CB-7452DAA6F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D50A11-6C1F-4039-A7CB-7452DAA6F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70E5D270-FE20-4A64-8633-ED9E07B7FEF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E5D270-FE20-4A64-8633-ED9E07B7FEF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E5D270-FE20-4A64-8633-ED9E07B7FEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E5D270-FE20-4A64-8633-ED9E07B7FEF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
