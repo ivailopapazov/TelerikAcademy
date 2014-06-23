@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <canvas id="the-canvas" width="650" height="450"></canvas>
+    <script>
+        var canvas = document.getElementById('the-canvas'),
+            context = canvas.getContext('2d'),
+            radius = 15,
+            xPos = 5 + radius,
+            yPos = 5 + radius,
+            directionDown = true,
+            directionRight = true;
+        canvas.style.border = '2px solid black';
+
+        function moveBall() {
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            if ((xPos + radius === canvas.width) || (xPos - radius === 0)) {
+                directionRight = !directionRight;
+            }
+
+            if ((yPos + radius === canvas.height) || (yPos - radius === 0)) {
+                directionDown = !directionDown;
+            }
+
+            if (directionDown) {
+                yPos++;
+            } else {
+                yPos--;
+            }
+
+            if (directionRight) {
+                xPos++;
+            } else {
+                xPos--;
+            }
+
+            context.beginPath();
+            context.arc(xPos, yPos, radius, 0, 2 * Math.PI);
+            context.stroke();
+
+            requestAnimationFrame(moveBall);
+        }
+
+        moveBall();
+    </script>
+</body>
+</html>

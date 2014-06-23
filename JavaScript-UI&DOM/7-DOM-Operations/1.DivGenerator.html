@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style type="text/css">
+		.random-div {
+			position: absolute;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<label for="number">Number of Divs</label>
+	<input type="text" id="number" />
+	<button id='generate'>Generate</button>
+	<script>
+		window.onload = function() {
+			var input = document.getElementById('number'),
+				button = document.getElementById('generate');
+
+			button.addEventListener('click', function() {
+				generateDivs(parseInt(input.value));
+			});
+		}
+
+		function generateDivs(count) {
+			// Create template element and fragment element.
+			var divTemplate = document.createElement('div'),
+				divContent = document.createElement('strong'),
+				bodyFragmet = document.createDocumentFragment();
+
+			divContent.innerHTML = 'div';
+			divTemplate.className = 'random-div';
+			divTemplate.appendChild(divContent);
+			
+			// Generating divs
+			for (var i = 0; i < count; i++) {
+				// Alter template properties
+				divTemplate.style.width = getRandomNumber(20, 101) + 'px';
+				divTemplate.style.height = getRandomNumber(20, 101) + 'px';
+				divTemplate.style.backgroundColor = getRandomColor();
+				divTemplate.style.color = getRandomColor();
+				divTemplate.style.top = getRandomNumber(0, screen.height + 1) + 'px';
+				divTemplate.style.left = getRandomNumber(0, screen.width + 1) + 'px';
+				divTemplate.style.borderRadius = getRandomNumber(0, 21) + 'px';
+				divTemplate.style.border = getRandomNumber(1, 21) + 'px solid ' + getRandomColor();
+
+				// Append deepcopy of the template to the fragmet
+				bodyFragmet.appendChild(divTemplate.cloneNode(true));
+			}
+
+			// Append fragment content to DOM tree		
+			document.body.appendChild(bodyFragmet);
+		}
+
+		function getRandomNumber(min, max) {
+			if (!min) {
+				min = 0;
+			}
+
+			if (!max) {
+				max = 100;
+			}
+
+			var result = Math.random() * (max - min) + min;
+
+			return Math.floor(result);
+		}
+
+		function getRandomColor() {
+			var red = getRandomNumber(0, 256);
+			var green = getRandomNumber(0, 256);
+			var blue = getRandomNumber(0, 256);
+
+			return '#' + red.toString(16) + green.toString(16) + blue.toString(16);
+		}
+	</script>
+</body>
+</html>

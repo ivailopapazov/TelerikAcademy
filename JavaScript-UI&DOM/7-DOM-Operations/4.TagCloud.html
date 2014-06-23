@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style>
+		.tag-cloud {
+			width: 260px;
+			border: 1px solid black;
+			padding: 5px;
+		} 
+
+		span {
+			display: inline-block;
+			margin: 3px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		window.onload = function() {
+			var tags = [
+				"cms", "javascript", "js", 
+				"ASP.NET MVC", ".net", ".net", "css", 
+				"wordpress", "xaml", "js", "http", "web", 
+				"asp.net", "asp.net MVC", "ASP.NET MVC", 
+				"wp", "javascript", "js", "cms", "html", 
+				"javascript", "http", "http", "CMS"
+			];
+						 
+			var tagCloud = generateTagCloud(tags, 17, 42); 
+
+			function generateTagCloud(tags, minSize, maxSize) {
+				var tagCount = {},
+					maxTagCount = 0;
+
+				for (var i = 0; i < tags.length; i++) {
+					var currentTag = tags[i].toLowerCase()
+					if (tagCount[currentTag]) {
+						tagCount[currentTag]++;
+					}
+					else {
+						tagCount[currentTag] = 1;
+					}
+
+					if (maxTagCount < tagCount[currentTag]) {
+						maxTagCount = tagCount[currentTag];
+					}
+				}
+
+				var fontSizeStep = (maxSize - minSize) / maxTagCount,
+					containerElement = document.createElement('div'),
+					tagTemplate = document.createElement('span');
+
+				for (tag in tagCount) {
+					tagTemplate.innerHTML = tag;
+					tagTemplate.style.fontSize = (minSize + Math.floor(fontSizeStep * (tagCount[tag]))) + 'px';
+
+					containerElement.appendChild(tagTemplate.cloneNode(true));
+				}
+
+				containerElement.className = 'tag-cloud';
+				document.body.appendChild(containerElement);
+			}
+		}
+	</script>
+</body>
+</html>

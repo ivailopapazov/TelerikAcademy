@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Model</title>
+	<style>
+		#todo-list {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<label for="input">Add item: </label>
+	<input type="text" id="input" />
+	<button id="add-item">add</button>
+	<button id="show-hide">hide</button>
+	<ul id="todo-list">
+	</ul>
+	<script>	
+		window.onload = function() {
+			var inputItem = document.getElementById('input'),
+				addItem = document.getElementById('add-item'),
+				showHideItem = document.getElementById('show-hide'),
+				todoList = document.getElementById('todo-list'),
+				listItemTemplate = document.createElement('li'),
+				deleteElement = document.createElement('button');
+
+			deleteElement.innerHTML = 'x';
+
+			addItem.addEventListener('click', function(ev) {
+				listItemTemplate.appendChild(document.createTextNode(inputItem.value));
+				listItemTemplate.appendChild(deleteElement.cloneNode(true));
+				todoList.appendChild(listItemTemplate.cloneNode(true));
+				todoList.lastChild.lastChild.addEventListener('click', onDeleteButtonClick);
+
+				emptyNode(listItemTemplate);
+			});
+
+			showHideItem.addEventListener('click', function(ev) {
+				if (showHideItem.innerHTML === 'show') {
+					showHideItem.innerHTML = 'hide';
+					todoList.style.display = '';
+				}
+				else {
+					showHideItem.innerHTML = 'show';
+					todoList.style.display = 'none';
+				}
+			});
+
+			function onDeleteButtonClick(ev) {
+				var currentNode = ev.target;
+				currentNode.parentNode.parentNode.removeChild(currentNode.parentNode);//LoL, Ain't nobody got time for this.
+			}
+
+			function emptyNode(node) {
+				while (node.lastChild) {
+					node.removeChild(node.lastChild);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

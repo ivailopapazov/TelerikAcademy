@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+	<label for="input">Enter text: </label>
+	<input type="text" name="input" id="input" />
+	<input type="submit" value="Print" onclick="printInputText()" />
+
+	<script>
+		function printInputText() {
+			var inputTextElement = document.getElementById("input");
+			console.log(inputTextElement.value);
+		}
+	</script>
+</body>
+</html>

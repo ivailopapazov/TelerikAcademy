@@ -1,0 +1,36 @@
+#slider-container {
+	width: 960px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	position: relative;
+}
+
+.prev-item, .next-item {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	font-size: 24px;
+	background-color: black;
+	color: white;
+	padding: 4px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.prev-item:hover, .next-item:hover {
+	background-color: #ccc;
+	color: black;
+}
+
+.prev-item {
+	left: 0;
+}
+
+.next-item {
+	left: 100%;
+}
+
+.image-item {
+	display: inline-block;
+}

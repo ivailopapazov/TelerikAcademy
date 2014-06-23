@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<style>
+		canvas {
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="graphics" width="900" height="650">
+		Your browser does not support canvas!
+	</canvas>
+	<script>
+		var canvasElement = document.getElementById("graphics");
+		var draw = canvasElement.getContext('2d');
+
+		draw.beginPath();
+		draw.save();
+		draw.scale(1.1, 1);
+		draw.arc(190, 230, 60, 0, 2 * Math.PI);
+		draw.fillStyle = 'lightblue';
+		draw.strokeStyle = 'blue';
+		draw.fill();
+		draw.stroke();
+		draw.restore();
+		draw.closePath();
+
+		// Draw house and roof
+		var houseWidth = 290,
+			houseHeight = 220,
+			housePositionX = 540,
+			housePositionY = 200;
+		draw.fillStyle = '#975B5B';
+		draw.strokeStyle = 'black';
+
+		draw.beginPath();
+		draw.rect(housePositionX, housePositionY, houseWidth, houseHeight)
+		draw.lineTo(housePositionX + (houseWidth / 2), housePositionY - 160);
+		draw.lineTo(housePositionX + houseWidth, housePositionY);
+		draw.fill();
+		draw.stroke();
+
+		// Draw chimney			
+		draw.beginPath();
+		var chimneyTopLeftY = housePositionY - 120,
+			chimneyTopLeftX = housePositionX + 200,
+			chimneyWidth = 30,
+			chimenyHeight = 80;
+
+		draw.moveTo(chimneyTopLeftX, chimneyTopLeftY + chimenyHeight);
+		draw.lineTo(chimneyTopLeftX, chimneyTopLeftY);
+		draw.lineTo(chimneyTopLeftX + chimneyWidth, chimneyTopLeftY);
+		draw.lineTo(chimneyTopLeftX + chimneyWidth, chimneyTopLeftY + chimenyHeight);
+		draw.fill();
+		draw.stroke();
+
+		draw.beginPath();
+		var scaleRatio = 0.3;
+		draw.save()
+		draw.scale(1, scaleRatio);
+		draw.arc(chimneyTopLeftX + (chimneyWidth / 2), chimneyTopLeftY * (1 / scaleRatio), chimneyWidth / 2, 0, 2 * Math.PI);
+		draw.fill();
+		draw.stroke();
+		draw.restore();
+
+		// Draw windows
+		drawWindow(draw, housePositionX + 20 , housePositionY + 25);
+		drawWindow(draw, housePositionX + 160 , housePositionY + 25);
+		drawWindow(draw, housePositionX + 160 , housePositionY + 115);
+
+		draw.beginPath();
+		draw.rect(100,100,19,19);
+		draw.stroke();
+		draw.fill();
+		function drawWindow(context, x, y) {
+			var glassWidth = 50,
+				glassHeight = 30,
+				glassSpace = 5;
+
+			context.fillStyle = 'black';
+			context.fillRect(x, y, glassWidth, glassHeight);
+			context.fillRect(x + glassWidth + glassSpace, y, glassWidth, glassHeight);
+			context.fillRect(x, y + glassHeight + glassSpace, glassWidth, glassHeight);
+			context.fillRect(x + glassWidth + glassSpace, y + glassHeight + glassSpace, glassWidth, glassHeight);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style>
+		div {
+			border: 1px solid black;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<h1>Parent div</h1>
+		<div class="child">
+			<h3>Child div</h3>
+			<div class="child">
+				<h3>Child div</h3>
+			</div>
+		</div>
+		<div class="child">
+			<h3>Child div</h3>
+		</div>
+	</div>
+	<div class="parent">
+		<h1>Parent div</h1>
+	</div>
+	<script>
+		var innerDivsByTagName = selectInnerDivsByTagName();
+		console.log('Inner divs selected by tag name:')
+		for (var i = 0, length = innerDivsByTagName.length; i < length; i++) {
+			console.log(innerDivsByTagName[i]);
+		}
+
+		console.log('Inner divs selected by query selector:')
+		var innerDivsByQuerySelector = selectInnerDivs();
+		for (var i = 0, length = innerDivsByQuerySelector.length; i < length; i++) {
+			console.log(innerDivsByQuerySelector[i]);
+		}
+
+		function selectInnerDivs() {
+			return document.querySelectorAll('div > div');
+		}
+
+		function selectInnerDivsByTagName() {
+			var innerDivs = [];
+			var divs = document.getElementsByTagName('div');
+
+			for (var i = 0, length = divs.length; i < length; i++) {
+				if (divs[i].parentNode instanceof HTMLDivElement) {
+					innerDivs.push(divs[i]);
+				}
+			}
+
+			return innerDivs;
+		}
+	</script>
+</body>
+</html>

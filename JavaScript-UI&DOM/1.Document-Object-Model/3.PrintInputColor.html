@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+	<label for="color">Enter color: </label>
+	<input type="color" name="color" id="color" />
+	<input type="submit" value="Print" onclick="printInputText()" />
+
+	<script>
+		function printInputText() {
+			var inputColorElement = document.getElementById("color");
+			console.log(inputColorElement.value);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style type="text/css">
+		.div-item {
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			background-color: red;
+			border-radius: 100px;
+			border: 2px solid green;
+			font-weight: bold;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		window.onload = function() {
+			var divCount = 5,
+				angle = 0,	
+				circle = {
+					x: window.innerWidth / 2 - 50,
+					y: window.innerHeight / 2 - 50,
+					r: window.innerHeight / 3,
+				};
+
+			createDivs(divCount);
+			var divElements = document.getElementsByTagName('div');
+			frame();
+
+			function frame() {
+				rotateDivs(divElements, circle, angle);
+				angle += 0.1;
+
+				requestAnimationFrame(frame);
+			}
+
+			function rotateDivs(nodeList, trajectory, startPhase) {
+				var currentPhase = 0;
+
+				for (var i = 0, count = nodeList.length; i < count; i++) {
+					currentPhase = startPhase + (2 * Math.PI * i) / count;
+					nodeList[i].style.top = (trajectory.y + Math.sin(currentPhase) * trajectory.r) + 'px';
+					nodeList[i].style.left = (trajectory.x + Math.cos(currentPhase) * trajectory.r) + 'px';
+				}
+			}
+
+			function createDivs(count) {
+				var divTemplate = document.createElement('div'),
+					divContainer = document.createDocumentFragment();
+
+				divTemplate.className = 'div-item';
+				divTemplate.innerHTML = 'DIV';
+				for (var i = 0; i < count; i++) {
+					divContainer.appendChild(divTemplate.cloneNode(true));
+				}
+
+				document.body.appendChild(divContainer);
+			}
+		}
+	</script>
+</body>
+</html>

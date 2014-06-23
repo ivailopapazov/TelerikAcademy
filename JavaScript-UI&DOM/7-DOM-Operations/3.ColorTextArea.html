@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<style type="text/css">
+		body {
+			width: 690px;
+		}
+
+		#text-area {
+			font-size: 2em;
+			font-weight: bold;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<label for="background-color">Background: </label>
+	<input type="color" id="background-color" />
+	<label for="text-color">Background: </label>
+	<input type="color" id="text-color" />
+	<textarea id="text-area" cols="30" rows="10"></textarea>
+
+	<script>
+		window.onload = function() {
+			var backgroundColorElement = document.getElementById('background-color'),
+				textColorElement = document.getElementById('text-color'),
+				textAreaElement = document.getElementById('text-area');
+
+			backgroundColorElement.addEventListener('change', function() {
+				textAreaElement.style.backgroundColor = backgroundColorElement.value;
+			});
+
+			textColorElement.addEventListener('change', function() {
+				textAreaElement.style.color = textColorElement.value;
+			});
+		}
+	</script>
+</body>
+</html>
