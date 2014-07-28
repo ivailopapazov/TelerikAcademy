@@ -1,0 +1,11 @@
+div {
+	padding: 40px;
+}
+
+#container {
+	width: 680px;
+	margin: auto;
+	background-color: #ccc;
+	text-align: center;
+	border-radius: 10px;
+}

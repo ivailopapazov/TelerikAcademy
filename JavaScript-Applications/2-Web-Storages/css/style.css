@@ -1,0 +1,26 @@
+.wrapper {
+	width: 960px;
+	margin: auto;
+	background-color: #eee;
+
+}
+
+.wrapper .controls {
+	text-align: center;
+	padding: 10px;
+}
+
+.wrapper .input {
+	margin: 20px;
+}
+
+#solution-container {
+	height: 640px;
+	overflow-y: scroll;
+	background-color: #aaa;
+	padding: 10px;
+}
+
+#solution-container p {
+	line-height: 0.2em;
+}

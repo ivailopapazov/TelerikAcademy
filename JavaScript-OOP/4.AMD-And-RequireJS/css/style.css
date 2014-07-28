@@ -1,0 +1,14 @@
+#container {
+	display: inline-block;
+}
+
+.person-item {
+	border: 1px solid black;
+	text-align: center;
+	margin: 5px;
+		
+}
+
+#container .selected {
+	display: block;
+}

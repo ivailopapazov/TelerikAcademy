@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Manager</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div id="main-container">
+		<h1>Student Manager</h1>
+		<div id="control-container">
+			<label for="student-name">Add User:</label>
+			<input type="text" id="student-name" name="student-name" />
+			<button id="add-student">Add user</button>
+		</div>
+		<div id="list-container">
+			<label for="student-list">User List:</label>
+			<select name="student-list" id="student-list" size="2">
+			</select>
+			<button id="remove-student">Delete</button>
+		</div>
+	</div>
+	<script src="scripts/bower_components/requirejs/require.js" data-main="scripts/main"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<div id="test"></div>
+	<!-- <script src="scripts/bower_components/requirejs/require.js" data-main="scripts/app"></script> -->
+	<script src="scripts/printer.js"></script>
+	<script>
+		var printer = new controls.Printer('pesho');
+		console.log(printer.prop);
+		console.log(printer.getPriv());
+		var printer2 = new controls.Printer('gosho');
+		console.log(printer2.prop);
+		console.log(printer2.getPriv());
+		console.log(printer.getPriv());
+		
+
+	</script>
+</body>
+</html>
