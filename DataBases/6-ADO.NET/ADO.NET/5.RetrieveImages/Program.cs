@@ -30,13 +30,14 @@ namespace _5.RetrieveImages
                         imageName = imageName.Replace("/", " ");
 
                         byte[] imageArray = (byte[])imagesReader["Picture"];
-                        MemoryStream imageStream = new MemoryStream(imageArray);
-                        //imageStream.Write(imageArray, 0, imageArray.Length);
+                        // 78 - The meaning of life
+                        MemoryStream imageStream = new MemoryStream(imageArray, 78, imageArray.Length - 78);
                         Image picture = Image.FromStream(imageStream);
 
                         using (picture)
                         {
-                            picture.Save(Path.Combine("Images", imageName + ".jpg"), ImageFormat.Jpeg);
+                            string filePath = Path.Combine("Images", imageName + ".jpg");
+                            picture.Save(filePath, ImageFormat.Jpeg);
                         }
                     }
                 }
