@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysStore.RandomDataGenerator", "ToysStore.RandomDataGenerator\ToysStore.RandomDataGenerator.csproj", "{A63DBE44-6903-4539-9634-128DA237B327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysStore.Data", "ToysStore.Data\ToysStore.Data.csproj", "{12DD3EE0-7A5A-4781-9482-2C4594B6C73B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A63DBE44-6903-4539-9634-128DA237B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63DBE44-6903-4539-9634-128DA237B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63DBE44-6903-4539-9634-128DA237B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63DBE44-6903-4539-9634-128DA237B327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DD3EE0-7A5A-4781-9482-2C4594B6C73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DD3EE0-7A5A-4781-9482-2C4594B6C73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DD3EE0-7A5A-4781-9482-2C4594B6C73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DD3EE0-7A5A-4781-9482-2C4594B6C73B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
