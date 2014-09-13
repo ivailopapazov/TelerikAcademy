@@ -17,7 +17,7 @@ namespace ChatSystem.Data
         {
             MongoClient client = new MongoClient(connectionString);
             MongoServer server = client.GetServer();
-            this.db = server.GetDatabase("ChatSystem");
+            this.db = server.GetDatabase("chatsystem");
         }
 
         public void AddNewMessage(string messageText, string username)
