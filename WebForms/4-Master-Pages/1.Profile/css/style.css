@@ -1,0 +1,41 @@
+﻿body {
+    background-color: #e3e3e3;
+}
+
+.wrapper {
+    background-color: #81e158;
+    width: 960px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+aside {
+    float: left;
+    background-color: #019814;
+    border-radius: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.content {
+    float: left;
+    margin-left: 50px;
+}
+
+
+.main:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+header, footer {
+    text-align: center;
+}
+

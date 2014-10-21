@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_1.Profile.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <header>
+                <h1>Wellcome to your profile!</h1>
+            </header>
+            <div class="main">
+                <aside>
+                    <ul>
+                        <li><a href="/Home.aspx">Personal Information</a></li>
+                        <li><a href="/Friends.aspx">Friends</a></li>
+                        <li><a href="/Info.aspx">Additional Information</a></li>
+                    </ul>
+                </aside>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <footer>
+                <p>Copyright Doge Network&copy;</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
