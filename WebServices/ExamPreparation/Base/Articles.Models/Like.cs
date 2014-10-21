@@ -1,0 +1,18 @@
+namespace Articles.Models
+{
+    using System;
+    using System.Linq;
+
+    public class Like
+    {
+        public int Id { get; set; }
+
+        public string AuthorId { get; set; }
+
+        public virtual ApplicationUser Author { get; set; }
+
+        public int ArticleId { get; set; }
+
+        public virtual Article Article { get; set; }
+    }
+}

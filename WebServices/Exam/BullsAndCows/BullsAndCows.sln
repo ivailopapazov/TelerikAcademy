@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Models", "BullsAndCows.Models\BullsAndCows.Models.csproj", "{CA3580E0-B6BF-4985-9A80-B194A9CEC995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Data", "BullsAndCows.Data\BullsAndCows.Data.csproj", "{2D73C984-B982-4C78-B802-14339049D74D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Web", "BullsAndCows.Web\BullsAndCows.Web.csproj", "{851DFD23-DAFB-4D73-8DDA-1C90CC20ADE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA3580E0-B6BF-4985-9A80-B194A9CEC995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3580E0-B6BF-4985-9A80-B194A9CEC995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3580E0-B6BF-4985-9A80-B194A9CEC995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3580E0-B6BF-4985-9A80-B194A9CEC995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D73C984-B982-4C78-B802-14339049D74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D73C984-B982-4C78-B802-14339049D74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D73C984-B982-4C78-B802-14339049D74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D73C984-B982-4C78-B802-14339049D74D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851DFD23-DAFB-4D73-8DDA-1C90CC20ADE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851DFD23-DAFB-4D73-8DDA-1C90CC20ADE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851DFD23-DAFB-4D73-8DDA-1C90CC20ADE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851DFD23-DAFB-4D73-8DDA-1C90CC20ADE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
